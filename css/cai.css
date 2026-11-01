@@ -1,0 +1,83 @@
+/* =========================================================
+   Constitutional AI infographic, built as HTML (project page only).
+   Sizes are in the original artboard's units (1280 wide) times --u, so on wide screens every node sits exactly
+   where it is in the original design. Below 720px of figure width the same nodes re-flow into a two-column grid.
+   Arrows are drawn by js/flow.js from the positions of the boxes, so they follow either layout.
+   ========================================================= */
+.cai{--blue:#1856a0;--yellow:#ffe000;--light:#caf3ff;--mid:#abe5ff;
+  --u:calc(100cqw / 1280);
+  container-type:inline-size;margin:0 0 90px;font-family:'Nunito Sans',system-ui,sans-serif;color:#000;line-height:1.19}
+.cai-defs{position:absolute;width:0;height:0;overflow:hidden}
+.cai h2,.cai h3{font-family:'Nunito Sans',system-ui,sans-serif;font-weight:700;letter-spacing:0;color:inherit;margin:0}
+.cai p{margin:0}
+
+.cai-title{display:grid;place-items:center;height:calc(157.2 * var(--u));margin-bottom:calc(20.6 * var(--u));background:var(--blue);color:#fff;text-align:center}
+.cai-title h2{font-size:calc(72 * var(--u));line-height:1.1}
+.cai-band{display:flex;flex-direction:column;justify-content:center;height:calc(93.9 * var(--u));background:var(--yellow);text-align:center}
+.cai-band h3{font-size:calc(36 * var(--u));line-height:1.15}
+.cai-band p{font-size:calc(24 * var(--u))}
+.cai-phase + .cai-phase{margin-top:calc(94 * var(--u))}
+
+/* flows: nodes placed at their original coordinates */
+.flow{position:relative;height:calc(var(--fh) * var(--u));margin-top:calc(12 * var(--u))}
+.flow>.node,.flow>.loop{position:absolute;left:calc(var(--x) * var(--u));top:calc(var(--y) * var(--u));width:calc(var(--w) * var(--u));height:calc(var(--h) * var(--u))}
+.flow>.node{z-index:2}
+.flow>svg.links{position:absolute;left:0;top:0;z-index:1;overflow:visible;pointer-events:none}
+
+/* models, constitution, learning cycles: symbols from the original artwork, labels as real text */
+.node.sym>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.node.sym .lbl{position:absolute;left:calc(var(--x) * var(--u));top:calc(var(--y) * var(--u));transform:translate(-50%,-50%);font-size:calc(var(--fs) * var(--u));text-align:center;white-space:nowrap}
+
+/* speech bubbles */
+.bubble{display:flex;align-items:center;justify-content:center;text-align:center;font-size:calc(24 * var(--u));border-radius:calc(30 * var(--u))}
+.bubble.light{background:var(--light)}
+.bubble.mid{background:var(--mid)}
+.bubble::after{content:"";position:absolute;top:100%;width:calc(23.6 * var(--u));height:calc(23.5 * var(--u));background:inherit}
+.bubble.tail-r::after{right:calc(29.9 * var(--u));clip-path:polygon(0 0,100% 0,100% 100%)}
+.bubble.tail-l::after{left:calc(29.9 * var(--u));clip-path:polygon(0 0,100% 0,0 100%)}
+.cai .txt{white-space:nowrap}
+
+/* datasets (stacked cards) and preference labels: cards with a folded corner */
+.docs,.labels{font-size:calc(24 * var(--u))}
+.docs{padding:calc(9.9 * var(--u)) 0 0 calc(9.8 * var(--u))}
+.docs::before{content:"";position:absolute;left:0;top:0;width:calc(100% - 9.8 * var(--u));height:calc(100% - 9.9 * var(--u));background:var(--mid);border-radius:calc(8 * var(--u))}
+.docs .txt,.labels .txt{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:100%;text-align:center;
+  background:var(--light);border-radius:calc(8 * var(--u));
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 27.5 * var(--u)),calc(100% - 27.5 * var(--u)) 100%,0 100%)}
+.docs .txt::after,.labels .txt::after{content:"";position:absolute;right:0;bottom:0;width:calc(27.5 * var(--u));height:calc(27.5 * var(--u));background:var(--mid);clip-path:polygon(0 0,100% 0,0 100%)}
+
+/* the repeating loop: framed box with the REPEAT tag in its bottom-right corner */
+.loop{z-index:0;border:calc(5 * var(--u)) solid var(--blue);border-radius:calc(21 * var(--u));background:rgb(202 243 255 / .1)}
+.repeat{position:absolute;right:calc(-7.9 * var(--u));bottom:calc(-7.9 * var(--u));width:calc(136.4 * var(--u));height:calc(56.6 * var(--u))}
+.repeat svg{position:absolute;inset:0;width:100%;height:100%}
+.repeat span{position:absolute;left:calc(67.75 * var(--u));top:calc(34.55 * var(--u));transform:translate(-50%,-50%);font-weight:700;font-size:calc(21 * var(--u));color:var(--blue)}
+
+/* entrance: the diagram builds up in reading order. Each box rises in with the site's reveal (style.css), staggered by
+   its --i on wide screens; each arrow fades in together with the box it points to (flow.js gives it that box's --i). */
+.cai .flow>.reveal{transition-delay:calc(var(--i, 0) * 110ms)}
+.js .flow .arw{opacity:0;transition:opacity .6s var(--ease) calc(var(--i, 0) * 110ms + .25s)}
+.js .flow.is-on .arw{opacity:1}
+.flow>svg.links-m{display:none;position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:1}
+.links-m path{fill:none;stroke:var(--blue);stroke-width:5}
+.links-m polygon{fill:var(--blue)}
+.cai br.bm{display:none}
+@media (prefers-reduced-motion:reduce){.js .flow .arw{opacity:1;transition:none}}
+
+/* ---------- narrow: the phone layout from the mobile design file (cai-mobile-layout.svg) ----------
+   Every node keeps its box from that file (--nx --ny --nw --nh, in 1/560 of the figure width) and its line breaks
+   (br.bm); arrows are the drawn ones (svg.links-m). Everything is in --u, so the whole figure scales as one piece. */
+@container (max-width:720px){
+  .cai-title,.cai-band,.flow{--u:calc(100cqw / 560)}
+  .cai-title{height:auto;padding:calc(22 * var(--u)) calc(16 * var(--u));margin-bottom:calc(14 * var(--u))}
+  .cai-title h2{font-size:calc(54 * var(--u))}
+  .cai-band{height:auto;padding:calc(14 * var(--u)) calc(16 * var(--u))}
+  .cai-phase + .cai-phase{margin-top:0}                       /* the space is part of the flow above (--nfh) */
+  .flow{height:calc(var(--nfh) * var(--u));margin-top:calc(14 * var(--u))}
+  .flow>.node,.flow>.loop{left:calc(var(--nx) * var(--u));top:calc(var(--ny) * var(--u));width:calc(var(--nw) * var(--u));height:calc(var(--nh) * var(--u))}
+  .flow>svg.links{display:none}
+  .flow>svg.links-m{display:block}
+  .cai br.bm{display:inline} .cai br.bd{display:none}
+  /* boxes and arrows reveal one by one as they scroll in, arrows just after */
+  .cai .flow>.reveal{transition-delay:0s}
+  .cai .arw-m.reveal{transition-delay:.2s}
+}

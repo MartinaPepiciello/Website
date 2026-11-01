@@ -1,0 +1,195 @@
+/* =========================================================
+   "Introduction to Effective Altruism" infographic, built as HTML (project page only).
+   Sizes are in the original artboard's units (1280 wide) times --u. On wide screens the intro, values and
+   take-action sections keep the original arrangement; cause cards are two columns. Below 760px of figure width
+   everything stacks into one column. Fonts: Raleway (headings) and Merriweather (text), as in the EA style guide.
+   ========================================================= */
+.ea{--teal:#0c869b;--ink:#333;--card:#ccf0f2;--u:calc(100cqw / 1280);
+  container-type:inline-size;margin:0 0 90px;font-family:Merriweather,Georgia,serif;color:var(--ink)}
+.ea-defs{position:absolute;width:0;height:0;overflow:hidden}
+.ea h2,.ea h3,.ea h4{font-family:Raleway,system-ui,sans-serif;letter-spacing:0;margin:0}
+.ea p{margin:0}
+.ea .tile{display:block;width:100%;height:auto}
+.ea .tile text{font-family:Merriweather,Georgia,serif}
+.ea a{color:var(--teal);text-decoration:none;background:none;font-weight:400}
+.ea a:hover{text-decoration:underline}
+
+/* headings */
+.ea .ea-title{font-weight:700;font-size:calc(72 * var(--u));line-height:1.1;color:var(--teal);text-align:center;margin:calc(40 * var(--u)) 0 calc(70 * var(--u))}
+.ea .ea-h{font-weight:700;font-size:calc(48 * var(--u));line-height:1.15;color:var(--teal);padding:0 calc(30 * var(--u));margin:calc(110 * var(--u)) 0 calc(42 * var(--u))}
+
+/* sections that keep the original arrangement: children placed at artboard coordinates */
+.ea-intro,.ea-values,.ea-action{position:relative}
+.ea-intro{--y0:185;height:calc(470 * var(--u))}
+.ea-values{--y0:4410;height:calc(445 * var(--u))}
+.ea-action{--y0:5095;height:calc(585 * var(--u))}
+.a-wide .tile{overflow:visible}   /* the last description runs a little below the artwork's own box */
+.ea-at{position:absolute;left:calc(var(--x) * var(--u));top:calc((var(--y) - var(--y0)) * var(--u));width:calc(var(--w) * var(--u))}
+.ea-icard,.ea-vcard{overflow:visible}      /* connector lines to the bulb and the compass run outside the card */
+.a-list{display:none}
+
+/* cause-area cards */
+.ea-causes{display:grid;grid-template-columns:1fr 1fr;gap:calc(20 * var(--u));align-items:start;padding:0 calc(30 * var(--u))}
+.ea-col{display:grid;gap:calc(31 * var(--u))}
+.ea-col + .ea-col{margin-top:calc(136 * var(--u))}
+.ea-cause{background:var(--card);border-radius:calc(8 * var(--u));padding:calc(38 * var(--u)) calc(27 * var(--u)) calc(44 * var(--u))}
+.ea-cause header{display:flex;justify-content:space-between;align-items:flex-start;gap:calc(20 * var(--u));margin-bottom:calc(30 * var(--u))}
+.ea-cause h3{font-weight:600;font-size:calc(34 * var(--u));line-height:1.2;color:var(--teal)}
+.ea-cause header .tile{flex:none;width:calc(var(--tw) * var(--u));margin-top:calc(-14 * var(--u))}
+.ea-cause h4{display:inline-block;font-weight:700;font-size:calc(17 * var(--u));text-transform:uppercase;letter-spacing:.01em;
+  padding-bottom:calc(5 * var(--u));border-bottom:1px solid var(--ink);margin:calc(6 * var(--u)) 0 calc(14 * var(--u))}
+.ea-cause>p{font-size:calc(18 * var(--u));line-height:1.22}
+.ea-viz{margin:calc(34 * var(--u)) 0 calc(44 * var(--u))}
+.ea .lab{font-size:calc(14 * var(--u));line-height:1.25;text-align:center}
+.ea .lab.teal{color:var(--teal)}
+
+/* pictograms: one icon per unit, wrapped into the original number of columns */
+.pg{display:grid;grid-template-columns:repeat(var(--cols), auto);gap:calc(4 * var(--u));justify-content:center}
+.pg svg{display:block;width:calc(22 * var(--u));height:calc(22 * var(--u))}
+.pg.dark{color:var(--ink)} .pg.teal{color:var(--teal)}
+.n-people .pg,.a-people .pg{gap:calc(3 * var(--u)) calc(2 * var(--u))}
+.n-people .pg svg,.a-people .pg svg{width:calc(10 * var(--u))}
+
+.pc{display:grid;grid-template-columns:1fr 1fr;column-gap:calc(40 * var(--u));row-gap:calc(12 * var(--u))}
+.pc .c1{grid-column:1} .pc .c2{grid-column:2}
+/* as in the artwork: each column reads top to bottom (1 skull then 42; 35 coins then 1), the lone coin level with the skulls' last row */
+.pc .r1{grid-row:1} .pc .c1.r2{grid-row:2} .pc .c1.r3{grid-row:3 / 5;margin-top:calc(14 * var(--u))}
+.pc .c2.r2{grid-row:2 / 4;align-self:start} .pc .c2.r3{grid-row:4;align-self:end} .pc .r4{grid-row:5}
+
+.pf{display:grid;grid-template-columns:1fr calc(348 * var(--u));column-gap:calc(30 * var(--u));row-gap:calc(12 * var(--u));align-items:start}
+.pf .f-l1{grid-area:1 / 1} .pf .f-l2{grid-area:1 / 2}
+.pf .dot{grid-area:2 / 1;justify-self:center;width:calc(9 * var(--u));height:calc(9 * var(--u));border-radius:50%;background:var(--teal)}
+.pf .f-circle{grid-area:2 / 2}
+.pf .f-g1{grid-area:3 / 1;margin-top:calc(30 * var(--u))} .pf .f-g2{grid-area:3 / 2;align-self:end}
+.pf .f-l3{grid-area:4 / 1} .pf .f-l4{grid-area:4 / 2}
+
+.pn{display:grid;grid-template-columns:calc(298 * var(--u)) 1fr;column-gap:calc(30 * var(--u));align-items:end}
+.n-people{display:grid;gap:calc(12 * var(--u));justify-items:center}
+.n-people .pg + .pg{margin-top:calc(30 * var(--u))}
+.pa{display:grid;gap:calc(40 * var(--u))}
+/* min-content: the first column is as wide as the figure grid, so its long label wraps under it */
+.a-people{display:grid;grid-template-columns:min-content 1fr;column-gap:calc(30 * var(--u));align-items:end}
+.a-people>div{display:grid;gap:calc(10 * var(--u));justify-items:center}
+
+/* "what's been done" timelines: year, rail with diamonds (events) or fading bars (ongoing efforts), text */
+.ea-tl{position:relative;list-style:none;margin:0;padding:calc(10 * var(--u)) 0 calc(34 * var(--u));display:grid;gap:calc(34 * var(--u));overflow:clip;
+  --rail:calc(76 * var(--u))}
+.ea-tl::before{content:"";position:absolute;left:var(--rail);top:0;bottom:calc(6 * var(--u));width:calc(2.5 * var(--u));margin-left:calc(-1.25 * var(--u));background:var(--ink)}
+.ea-tl::after{content:"";position:absolute;left:var(--rail);bottom:0;width:calc(14 * var(--u));height:calc(13 * var(--u));margin-left:calc(-7 * var(--u));background:var(--ink);
+  clip-path:polygon(0 0,50% 55%,100% 0,100% 30%,50% 100%,0 30%)}
+.ea-tl li{position:relative;display:grid;grid-template-columns:calc(60 * var(--u)) 1fr;column-gap:calc(37 * var(--u));row-gap:calc(10 * var(--u));font-size:calc(18 * var(--u));line-height:1.22}
+.ea-tl .yr{grid-column:1;grid-row:1}
+.ea-tl p{grid-column:2}
+.ea-tl li.dot::before{content:"";position:absolute;left:var(--rail);top:calc(2 * var(--u));width:calc(15 * var(--u));height:calc(15 * var(--u));margin-left:calc(-7.5 * var(--u));background:var(--teal);transform:rotate(45deg)}
+/* ongoing efforts: a bar from the year to the end of the timeline, fading out (js/ea.js measures --bar) */
+.ea-tl li.ongoing::after,.ea-tl li.ongoing.two::before{content:"";position:absolute;left:var(--rail);top:calc(1 * var(--u));height:var(--bar, calc(220 * var(--u)));width:calc(11 * var(--u));margin-left:calc(-11 * var(--u));
+  background:linear-gradient(var(--teal), rgb(12 134 155 / 0))}
+.ea-tl li.ongoing.second::after,.ea-tl li.ongoing.two::before{margin-left:0}
+
+/* learn more: the same size as the charts' labels */
+.ea-more{padding:0 calc(30 * var(--u));font-size:calc(14 * var(--u));line-height:1.6}
+.ea-more p + p{margin-top:calc(8 * var(--u))}
+.ea-credit{margin-top:calc(50 * var(--u)) !important;padding-top:calc(10 * var(--u));border-top:1px solid #000;width:max-content;max-width:100%;font-size:calc(12 * var(--u))}
+
+/* phone-only pieces, hidden on wide screens */
+.a-chart-phone,.pd-phone,.phone-only,.vcard-m,.viz-sep{display:none}
+.ea-wires{position:absolute;left:0;top:0;pointer-events:none;overflow:visible;opacity:0;transition:opacity .8s var(--ease)}
+.ea-wires.on{opacity:1}
+@media (prefers-reduced-motion:reduce){.ea-wires{transition:none}}
+
+/* ---------- narrow: one column ----------
+   Used below 1000px (wider, the original arrangement would make the text too small). One scale: --u becomes one size
+   per artboard pixel (about 0.8px on a phone, at most 1px), so text and illustrations keep their artwork proportions
+   (body 18 -> 14.4px, card titles 24 -> 19.2px). Headings get their own steps for a phone: title 36.8px, section
+   headings 25.6px, card titles 20.8px; chart labels and "learn more" 12.8px, between those and the 14.4px text.
+   Connectors that the stacked layout needs are drawn by js/ea.js. */
+@container (max-width:999px){
+  .ea>*{--u:min(1px, 100cqw / 414);max-width:620px;margin-left:auto;margin-right:auto}
+  .ea .tile{width:calc(var(--tw) * var(--u));max-width:none}
+  .ea .ea-title{font-size:calc(46 * var(--u));margin:calc(10 * var(--u)) auto calc(44 * var(--u))}
+  .ea .ea-h{font-size:calc(32 * var(--u));padding:0;margin:calc(90 * var(--u)) auto calc(30 * var(--u))}
+  .ea .lab{font-size:calc(16 * var(--u))}
+  .ea-intro,.ea-values,.ea-action{height:auto;display:flex;flex-direction:column;align-items:center}
+  .ea-at{position:static;width:auto}
+  .wide-only{display:none} .phone-only{display:block}
+  .ea-icard{overflow:hidden}                           /* the wide layout's connector lines stop at the card edge */
+  .ea-wires{display:block}
+
+  /* intro: a small bulb first; a line from each side runs down to its card and meets the white line in its header */
+  .i-bulb{order:-1;margin-bottom:calc(36 * var(--u))}
+  .i-bulb .tile{width:calc(150 * var(--u))}
+  .i-l,.i-r{width:100%}
+  .i-l .tile,.i-r .tile{width:min(calc(413.1 * var(--u)), calc(100% - 36px));margin:0 auto}
+  .i-r{margin-top:calc(30 * var(--u))}
+  .ea-wires-intro,.ea-wires-values{z-index:2}
+
+  /* values: plain cards, text left-aligned; each card ends where its line starts. Prioritization and Open
+     truthseeking above the compass, Impartial altruism and Collaborative spirit below. */
+  .ea-values{gap:calc(22 * var(--u))}
+  .v-tl,.v-tr,.v-bl,.v-br{display:none}
+  .vcard-m{display:block;position:relative;width:calc(352 * var(--u));background:var(--card);border-radius:calc(8 * var(--u));
+    padding:calc(22 * var(--u)) calc(14 * var(--u)) calc(26 * var(--u)) calc(27.7 * var(--u))}
+  .vcard-m h4{font-family:Merriweather,Georgia,serif;font-weight:700;font-size:calc(24 * var(--u));line-height:1.25;color:var(--ink)}
+  .vcard-m .vd{display:block;height:calc(3 * var(--u));background:var(--teal);margin:calc(10 * var(--u)) calc(-14 * var(--u)) calc(14 * var(--u)) calc(-27.7 * var(--u))}
+  .vcard-m p{font-size:calc(18 * var(--u));line-height:1.22}
+  .vm-tl{order:1} .vm-tr{order:2} .v-compass{order:3;margin:calc(14 * var(--u)) 0} .vm-bl{order:4} .vm-br{order:5}
+
+  /* take action (action.svg): the woman, then the options; four separate paths and arrows are drawn by js/ea.js.
+     Each option: title on its path, icon on the path just before the arrow, description below (it runs under the icon). */
+  .a-wide{display:none}
+  .a-woman{align-self:flex-start;margin-left:calc(3.6 * var(--u))}
+  .a-list{display:grid;gap:calc(50 * var(--u));list-style:none;margin:calc(44 * var(--u)) 0 0;padding:0;position:relative;z-index:1;width:100%}
+  .ea-wires-action{z-index:0}
+  /* text in a column on the left (as in action.svg); icon (72 units) + arrow (46) in the 132 units on the right */
+  .a-list li{position:relative;display:block;padding:0 calc(132 * var(--u)) 0 calc(84 * var(--u))}
+  .a-list li .tile{position:absolute;right:calc(49.75 * var(--u));top:calc(-23.25 * var(--u));width:calc(76.5 * var(--u))}
+  .a-list h4{font-family:Merriweather,Georgia,serif;font-weight:700;font-size:calc(24 * var(--u));line-height:1.25;margin:0 0 calc(12 * var(--u))}
+  .a-list p{font-size:calc(18 * var(--u));line-height:1.3}
+
+  /* cause cards: icon beside the title, as in the artwork */
+  .ea-cause h3{font-size:calc(26 * var(--u))}
+  .ea-cause header{gap:calc(14 * var(--u));margin-bottom:calc(24 * var(--u))}
+  .ea-cause header .tile{width:calc(var(--tw) * var(--u) * .72);margin-top:calc(-4 * var(--u))}
+  .ea-causes{grid-template-columns:minmax(0, 1fr);gap:calc(26 * var(--u));padding:0}
+  .ea-col,.ea-cause,.ea-viz,.pa{min-width:0}
+  .ea-col{gap:calc(26 * var(--u))} .ea-col + .ea-col{margin-top:0}
+
+  /* a thin cyan rule between a card's two charts */
+  .ea .viz-sep{display:block;border:0;height:1px;background:var(--teal);width:calc(140 * var(--u));margin:calc(34 * var(--u)) auto !important;justify-self:center}
+
+  /* pictograms: a little larger, single icons centred over the block they compare with */
+  .pg svg{width:calc(28 * var(--u));height:calc(28 * var(--u))}
+  .pg{gap:calc(5 * var(--u))}
+  .pc{grid-template-columns:1fr}
+  .pc>*{grid-column:1 !important;grid-row:auto !important;margin-top:0 !important}
+  .pc .c1.r3,.pc .c2.r3{margin-top:calc(14 * var(--u)) !important}
+  .pf{grid-template-columns:1fr}
+  .pf>*{grid-area:auto !important;justify-self:center}
+  .pf .f-l2{margin-top:calc(30 * var(--u))}
+  .pf .dot{width:calc(9 * var(--u));height:calc(9 * var(--u))}
+  /* people: the same counts rearranged across the card width (180 = 20 x 9, 133 = 19 x 7), each figure larger */
+  .n-people .pg svg,.a-people .pg svg{width:calc(14 * var(--u));height:calc(31 * var(--u))}
+  .n-people .pg,.a-people .pg{gap:calc(4 * var(--u)) calc(3.8 * var(--u))}
+  .n-people .pg.teal{--cols:20 !important}             /* beats the column count set on the element */
+  .a-people .pg.dark{--cols:19 !important}
+  .n-people .pg + .pg{margin-top:0}                    /* NHS figure close to the GiveWell block (gap 3x a row gap) */
+  .pa,.pn{grid-template-columns:minmax(0, 1fr)}        /* tracks as wide as the card, not the widest chart */
+  .pn{row-gap:0;justify-items:center}
+  .n-people{width:100%}
+  .a-people{grid-template-columns:1fr;row-gap:calc(30 * var(--u))}
+  .a-people>div>.lab{order:-1}                         /* each label above its figures */
+  .pa{gap:0}
+
+  /* AI chart: the plot with its brain and bee markers drawn above it, wired to their dots */
+  .a-chart{display:none}
+  .a-chart-phone{display:block;margin:0 calc(-27 * var(--u))}
+  .a-chart-m{margin:0 auto}
+  /* decision-making: the phone version, about as wide as the card */
+  .pd{display:none}
+  .pd-phone{display:block;margin:0 calc(-27 * var(--u))}
+  .pd-m{margin:0 auto}
+
+  .ea .ea-more{padding:0;font-size:calc(16 * var(--u))}
+  .ea-more a{word-break:break-word}
+  .ea .ea-credit{margin-left:0;margin-right:0;font-size:calc(13 * var(--u))}
+}

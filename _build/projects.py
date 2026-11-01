@@ -1,0 +1,353 @@
+# Text copied from the live Google Sites pages (2026-10-23). Images in live order.
+# body: list of HTML blocks (strings starting with "<" are used as-is, others become <p>).
+# images: (file, alt). layout: "mosaic" (default), "solo", "strip".
+
+def L(href, text):
+    return f'<a href="{href}" rel="noopener" target="_blank">{text}</a>'
+
+CTA_PROJECT = "Would you like to collaborate on a project like this one?"
+CTA_ILLU = "Would you like to collaborate on a scientific illustration like this one?"
+
+DIAGRAMS = [
+  dict(slug="data-analysis-framework", title="Medical data analysis framework", layout="solo",
+    body=[
+      f"I had the opportunity to collaborate with the founder of {L('https://terraflow.app/', 'terraFlow')} to create a diagram illustrating their data analysis framework. terraFlow is a startup that offers an automated pipeline for analyzing complex cytometry datasets, providing researchers with a simplified process to gain insights from their data.",
+      "The figure visually represents the two contrasting approaches to analyzing cytometry data: traditional clustering methods and terraFlow’s approach. The diagram showcases how terraFlow's pipeline identifies explicit cell populations, while the traditional method only leads to the identification of major subtypes.",
+      "My task was to transform an initial sketch with outdated graphics into a clear and engaging diagram. I redesigned, reorganized, and simplified the visuals, while maintaining accuracy in depicting the data analysis processes. This involved strategically using color and layout to enhance the visual flow and highlight the key differences between the two data analysis approaches.",
+    ],
+    images=[("terraflow.webp", "Diagram comparing traditional clustering of cytometry data with terraFlow's automated pipeline")],
+    cta=CTA_PROJECT),
+
+  dict(slug="safety-instrumented-systems", title="Safety instrumented systems",
+    body=[
+      "I collaborated with <a href=\"https://hima.com/\" rel=\"noopener\" target=\"_blank\">HIMA</a> to create technical diagrams for their paper about the architectures of safety-critical systems. HIMA is a leading expert in safety-related automation solutions, trusted by companies in the process and rail industries worldwide.",
+      "The paper aims to teach students and professionals about safety-critical systems. Safety-critical systems use electrical, electronic, or programmable electronic systems, sometimes with other technologies, to implement safety functions and protect equipment and keep it under control. The paper introduces and explains concepts such as safety instrumented functions, safe failure fraction, and MooN architectures to non-expert audiences.",
+      "As the illustrator, my task was to redesign draft figures provided by the paper authors in a modern and appealing style for both students and professionals; I was also asked to add new illustrations to help make these technical concepts easier to grasp and more visually memorable. My ability to understand and distill complex technical topics was crucial in crafting clear and relevant illustrations that could enhance the readers' comprehension.",
+    ],
+    images=[
+      ("sis-architectures.webp", "Chart placing MooN architectures such as 1oo2, 2oo3 and 2oo2 by safety and availability"),
+      ("sis-stages.webp", "Safety instrumented function split into sensor, logic solver and final element stages"),
+      ("sis-1oo2.webp", "Four cases of a 1oo2 architecture: the safety function runs unless both channels fail"),
+      ("sis-elements.webp", "A 2oo3 sensor stage, safety PLC and 1oo2 valve stage"),
+      ("sis-signal.webp", "Signal path from a transmitter to the safety PLC over a 4-20 mA line"),
+      ("sis-valve-open.webp", "Valve with energized solenoid: safety relay closed, air and fluid flowing"),
+      ("sis-valve-closed.webp", "Valve with deenergized solenoid: safety relay open, no air or fluid flow"),
+    ],
+    thumb="sis-stages-800.webp",
+    cta=CTA_PROJECT),
+
+  dict(slug="atoms-in-optical-tweezers", title="Atoms in optical tweezers",
+    body=[
+      f"I collaborated with a professor from Virginia Tech's Physics Department to create a figure for their paper, {L('https://arxiv.org/abs/2409.05941', 'Scaling of Computational Order Parameters in Rydberg Atom Graph States')}. The paper focuses on building and testing graph states, a type of quantum state with applications in quantum computing. The researchers aimed to construct these graph states and demonstrate their use for measurement-based quantum computing.",
+      "The figure schematically depicts the experimental setup, showing a two-dimensional array of atoms held in place by optical tweezers, arranged in a square lattice. Each atom represents a vertex of the graph state. Connecting lines visualize the nearest-neighbor interactions between atoms that are used to establish the edges of the graph state. Additionally, the figure indicates a \"domain\" within the array, illustrating the area limited by errors where measurement-based logic can be performed.",
+      "The researcher initially provided an abstract description and a rough sketch of the setup, requiring me to bring it to life and to creatively conceptualize elements like the atom interactions and optical tweezers. The challenge was to create a scientifically accurate and informative illustration while ensuring it was visually appealing. After a couple of proposals and iterations, we settled on the one that was ultimately published.",
+    ],
+    images=[
+      ("atoms-laser_rev1.webp", "Published figure: square lattice of atoms held by optical tweezers, with interaction lines and the error-limited domain"),
+      ("atoms-laser_basic.webp", "Early proposal of the atoms in optical tweezers figure"),
+      ("atoms-laser_var1.webp", "Colour variation of the atoms in optical tweezers figure"),
+      ("atoms-laser_var2.webp", "Second colour variation of the atoms in optical tweezers figure"),
+    ],
+    cta=CTA_PROJECT),
+
+  dict(slug="geology-diagrams", title="Geology diagrams", h1="Geology maps and diagrams",
+    body=[
+      f"I had the opportunity to collaborate with a researcher from Trinity College Dublin to create precise geology maps and diagrams for their paper, {L('https://www.lyellcollection.org/doi/full/10.1144/qjegh2023-043', 'Development of a drought-resilient water supply from dolomitized limestones of the Irish Midlands')} published in the Quarterly Journal of Engineering Geology and Hydrogeology. This research aimed to identify a drought-resilient groundwater source for the town of Carlow in Ireland. The investigation successfully located a new water supply from dolomitized limestone and revealed a previously unrecorded karst feature.",
+      "The first figure provides an overview of the study area, highlighting the geological setting, key rivers, and locations of private wells used for the initial assessment. The second figure shows the interpretation of surface geophysics surveys, including zones of high and low resistivity, which helped identify potential drilling locations. The third figure presents geological logs of the three shortlisted sites, detailing the composition of the subsurface layers. The final figure shows a conceptual model of the site under pumping conditions, illustrating the connection between surface water and the deeper groundwater flow system.",
+      "The researcher provided hand-drawn sketches and diagrams, as well as some reference images of the target look to achieve. My challenge was to recreate these maps faithfully while cleaning them up and ensuring the information was clear and readable. I devoted special attention to representing different types of information about the same area without sacrificing clarity and highlighting necessary labels.",
+    ],
+    images=[
+      ("geo-map.webp", "Geological map of the study area near Carlow, Ireland, with rivers, wells and cross-section line A-A'"),
+      ("geo-interp.webp", "Study area investigations map and 2D resistivity section interpretations for sites A, B and C"),
+      ("geo-logs.webp", "Geological logs of the three shortlisted drilling sites"),
+      ("geo-cm.webp", "West-east cross-section: conceptual model of the site under pumping, with recharge from the river"),
+    ],
+    thumb="geo-map-800.webp",
+    review="It was a pleasure working with Martina, provided a very prompt and detail-oriented output for a geology/cartography figure. Highly recommended!",
+    cta=CTA_PROJECT),
+
+  dict(slug="constitutional-ai-training-diagram", title="Constitutional AI training diagram", layout="strip",
+    body=[
+      f"This diagram visualizes the training methodology for Constitutional AI, a process designed to align large language models with human values (more specifically, helpfulness and harmlessness) using a set of human-written principles together with feedback provided by AI. It is based on {L('https://arxiv.org/pdf/2212.08073', 'this paper')} released by Anthropic in 2022.",
+      "The diagram aims to make a complex technical process more accessible and intuitive to understand. It's designed for AI students, researchers who don't specialize in this particular field, and anyone interested in AI alignment with a minimal technical background.",
+    ],
+    images=[
+      ("cai1.webp", "Constitutional AI training diagram, part 1 of 3"),
+      ("cai2.webp", "Constitutional AI training diagram, part 2 of 3"),
+      ("cai3.webp", "Constitutional AI training diagram, part 3 of 3"),
+    ],
+    after=[
+      "The diagram breaks down the two-phase Constitutional AI training approach: Supervised Learning and Reinforcement Learning. By using a visual flow structure, color coding, and simplified iconography, it transforms abstract concepts into a clear step-by-step process that readers can easily follow and remember.",
+      "My goal was to demystify the technical aspects of AI alignment while maintaining technical accuracy. I focused on creating a clean, structured visual narrative that shows how AI systems can be trained to identify and revise harmful responses according to constitutional principles, without requiring direct human feedback at every step. I maintained a minimal, flat design style to emphasize clarity and reinforce the technical nature of the content while making it approachable for individuals without deep expertise in this domain.",
+      "I approached this challenge by turning the key components of the Constitutional AI methodology into visual elements, including iconography and visual cues that can help readers understand and remember the concepts more effectively. For example, the consistent robot iconography with various distinctive features helps to visualize the different variations of language models that are used throughout the process. I also visualized the connections among the key components through arrows and loops, which help create a more intuitive understanding of the information flow.",
+      "This diagram serves as both an educational tool and a reference guide, allowing viewers to understand the innovative approach to AI alignment that uses AI feedback rather than relying solely on human supervision—a critical advancement for developing safer AI systems as capabilities continue to scale.",
+    ],
+    thumb="cai-preview-800.webp",
+    cta=CTA_PROJECT),
+
+  dict(slug="introduction-to-effective-altruism-infographic", title="Effective Altruism infographic", h1="Introduction to Effective Altruism infographic", layout="strip",
+    body=[
+      f"This infographic adapts the {L('https://www.effectivealtruism.org/articles/introduction-to-effective-altruism', 'Introduction to Effective Altruism')} post, aiming to make it more accessible and easier to digest to broaden its potential audience, and to make the ideas more memorable through graphics and data visualizations.",
+      f"You can download a full-resolution PDF of the infographic {L('https://drive.google.com/file/d/1bx-hZBfeMZKXdSTf8VeHY95z7o8VnZXy/view?usp=drive_link', 'here')}. Scroll down for more insights into the creative process!",
+    ],
+    images=[
+      ("intro-to-ea-1.webp", "Introduction to Effective Altruism infographic, part 1 of 6"),
+      ("intro-to-ea-2.webp", "Introduction to Effective Altruism infographic, part 2 of 6"),
+      ("intro-to-ea-3.webp", "Introduction to Effective Altruism infographic, part 3 of 6"),
+      ("intro-to-ea-4.webp", "Introduction to Effective Altruism infographic, part 4 of 6"),
+      ("intro-to-ea-5.webp", "Introduction to Effective Altruism infographic, part 5 of 6"),
+      ("intro-to-ea-6.webp", "Introduction to Effective Altruism infographic, part 6 of 6"),
+    ],
+    after=[
+      "<h2>Process and strategy</h2>",
+      "<h3>The idea</h3>",
+      "My goal was to make the post more accessible and appealing to a broader audience, specifically people who are not used to reading long-form content on rather technical subjects. This also makes it easier to share with someone who could be interested in the ideas of effective altruism. Finally, I aimed to stay faithful to the content and structure of the original post, since it already includes a very well-crafted narrative that provides an accurate introductory picture of effective altruism.",
+      "<h3>My approach</h3>",
+      "Because combining text and (relevant) graphics improves comprehension, retention, and engagement, I made the ideas presented in the post more memorable and easier to grasp by combining visuals with minimal text. In practice, I visualized as much of the post as I could, and reduced the text to what was strictly necessary to convey the key messages.",
+      "For the introductory section, I focused on showing the dual aspect of effective altruism as both a research field and a community, immediately answering the question in the title \"What is effective altruism?\". I also introduced the effective altruism logo in large size to immediately give viewers a strong visual anchor to associate with effective altruism.",
+      "The examples section was the one I spent the most time on. I decided, for each cause area, to write a short introduction on why the problem is important, accompanied by two data visualizations to \"show, not tell\" (for more details about the data visualizations, see the section below). I also included a timeline with examples of what has been done to address the issues, using diamonds for events with a specific date and gradients for ongoing efforts; I avoided adding more icons to prevent visually cluttering this section.",
+      "For the values section, I chose to represent the four values with icons on a compass, each accompanied by a short explanation. The central element of the compass, often associated with moral values, helps viewers remember that the community is united by a set of values.",
+      "For the section on taking action, I visualized the different possibilities as branching paths a person can take. Once again, this depiction of paths should help reinforce that there are different types of action one can take, and effective altruism is not, e.g., just about donations.",
+      "<h2>Design choices</h2>",
+      "<h3>Overall style</h3>",
+      f"For colors and typography, I followed quite closely the {L('https://company-65404.frontify.com/d/hG9FgXLUpVOM/effective-altruism-style-guide#/-/colors', 'Effective Altruism Style Guide')} to help build a sense of trust and brand consistency, especially since this is an introduction to the movement and first impressions matter.",
+      "I also kept the visual style flat and minimal, again to communicate a sense of trust and the importance of the topic.",
+      "<h3>Data visualizations</h3>",
+      "For the data visualizations that were already present in the original post, I wanted to make them look even more impactful and compelling. While bar charts are certainly more effective at showing the scope of data than just presenting numbers in tables, visualizations that include pictograms can show scope differences even more effectively. For example, you can immediately see that there are about 40 deaths from COVID for each death from terrorism, and seeing 180 stick figures can make you more easily imagine the actual people that could be saved with $1M.",
+      "I also added one data visualization to the AI alignment section and two to the decision-making section for better visual consistency with the other sections. For AI alignment, I showed the rapid progress of AI models with a plot of the computation used to train them, along with reference points of the human and honeybee brain. For decision-making, I estimated and visualized how many people the average US politician can affect, and added a timeline with examples of poor and good decision-making throughout history.",
+      "In general, I aimed to keep the data visualizations as simple as I could, e.g. by removing unit scales from plot axes that are not really necessary to grasp the relation between different areas of the graph, while avoiding compromising understandability.",
+    ],
+    thumb="intro-to-ea-preview-800.webp",
+    cta=CTA_PROJECT),
+
+  dict(slug="molecular-neuroscience-processes", title="Molecular neuroscience processes",
+    body=[
+      f"I had the pleasure to work with a researcher from Università degli Studi di Udine to create the figures for their publication in Frontiers in Molecular Neuroscience. The paper, titled {L('https://www.frontiersin.org/journals/molecular-neuroscience/articles/10.3389/fnmol.2023.1166879/full', 'Is Drp1 a link between mitochondrial dysfunction and inflammation in Alzheimer’s disease?')}, examines the role of inflammation in Alzheimer's disease.",
+      "The first figure provides a visual overview of how a multi-protein complex called the NLRP3 inflammasome is activated in two steps. The second figure illustrates how a protein called Drp1 contributes to the assembly of the NLRP3 inflammasome.",
+      "I was tasked with transforming the researcher's hand-drawn sketches into clear and engaging figures. The challenge was to bring these sketches to life while accurately representing the complex biological processes described in the paper. I organized the information as clearly as possible, using visual cues to emphasize different parts of the processes. By employing a carefully selected color palette, I ensured that the different elements in the figures were easily distinguishable while maintaining visual cohesion and avoiding overwhelming the viewer with too many colors.",
+    ],
+    images=[
+      ("nlrp3-activation.webp", "Figure showing the two-step activation of the NLRP3 inflammasome"),
+      ("drp1-nlrp3.webp", "Figure showing how Drp1 contributes to the assembly of the NLRP3 inflammasome in a microglial cell"),
+    ],
+    thumb="drp1-nlrp3-800.webp",
+    cta=CTA_PROJECT),
+]
+
+COMICS = [
+  dict(slug="young-and-old-genes", title="Young and old genes",
+    body=[
+      "A study has shown that the age of a gene determines how fast they adapt.",
+      "In 1932, Sewall Wright introduced the metaphor of the “fitness landscape” model, where evolving genetic populations “walk” toward a fitness peak, just like a hiker slowly making its way to the top of the mountain. In 1998, Orr demonstrated that the further away a population is from its fitness peak, the larger the steps it makes.",
+      "One prediction of this theory is that recently evolved, or “young”, genes tend to accumulate more adaptive mutations with larger effects than older genes because they are further away from their fitness peak. This hypothesis was successfully tested and confirmed in a 2022 study.",
+      "After the researcher explained to me this interesting hiking metaphor for genes, I created a sketch of how I envision it.",
+      "Then, we worked together on better characterizing the young and old genes. We made the young gene more saturated than the old one, and gave it a lighter backpack. We also gave the old genes some classical “grandfather” features.",
+      "We showed that the young gene is walking faster by having it take a larger step and adding an air motion effect behind it.",
+    ],
+    images=[
+      ("genes-young-old.webp", "A young gene and an old gene hiking up a mountain toward a fitness peak"),
+      ("genes-young-old-color-sketch.webp", "Colour sketch of the young and old genes illustration"),
+    ],
+    review="I really enjoyed working with Martina, communication was super easy, and we reached the final version of the illustration quite fast. I highly recommend Martina for scientific illustrations :)",
+    thumb="genes-young-old-800.webp",
+    cta=CTA_ILLU),
+
+  dict(slug="noisy-genes", title="Noisy genes", layout="solo",
+    body=[
+      "In a 2023 study, scientists dived into the world of gene expression, focusing on the intriguing concept of gene expression noise. Genes act as the blueprints for our bodies, and they must function precisely, similar to the way workers in an office must complete their tasks accurately.",
+      "Gene expression noise is like the occasional unpredictability in how genes carry out their instructions. Inside our cells, genes work to produce proteins, but sometimes they don't follow the script precisely. This inherent randomness in gene behavior is referred to as \"gene expression noise.\" This study highlights that the location of genes in this network plays a crucial role. Some genes need to be precise because their errors affect the entire network, just as a disruptive colleague can impact the entire office. Others can be less precise because their mistakes have less impact.",
+      "I had the privilege of collaborating closely with one of the paper's authors to bring to life their concept of genes as workers connected by a network. The illustration portrays two scenarios within a group of genes. In the first scenario, a gene occupies a central position, and when it makes a mistake (produces noise), it affects all the other genes connected to it via cables, much like a noisy coworker disrupting others in a shared workspace. In the second scenario, a gene is positioned at the edge, and when it makes an error, it doesn't disrupt the entire office because it's not as central to the network.",
+    ],
+    images=[("genes-network2.webp", "Genes drawn as office workers connected by cables: a noisy central gene disturbs the whole network, a noisy gene at the edge does not")],
+    review="This was a very nice and constructive collaboration. I am looking very forward to the next occasion to use Martina's skills!",
+    thumb="genes-network2-800.webp",
+    cta=CTA_ILLU),
+
+  dict(slug="faults-errors-failures", title="Faults, errors, failures",
+    body=[
+      "I had the pleasure to collaborate with <a href=\"https://hima.com/\" rel=\"noopener\" target=\"_blank\">HIMA</a>, a German company specializing in safety-related automation solutions, on a project delving into the world of functional safety. The aim was to make the topics of faults, errors, and failures more approachable for university students. In partnership with HIMA, who authored a paper on these subjects, I created a series of illustrations to complement their insights. The illustrations explore the distinctions between faults, errors, and failures, provide examples, and highlight preventive measures. Together, we strived to bring vibrancy to the often perceived dry realm of functional safety, making it more engaging and memorable for students.",
+    ],
+    images=[
+      ("safety1.webp", "A purple monster made of faults, errors and failures attacking a safety system"),
+      ("safety2.webp", "Two code functions side by side: a fault with no error, and a fault causing an error"),
+      ("safety5.webp", "How a fault in a program leads to an error and then to a failure"),
+      ("safety6.webp", "Comic panels showing everyday examples of faults, errors and failures"),
+    ],
+    thumb="safety6-800.webp",
+    cta=CTA_PROJECT),
+
+  dict(slug="seismic-monitoring", title="Seismic monitoring", h1="Seismic monitoring in mines",
+    body=[
+      "Teaming up with K-UTEC, a German company at the forefront of salt and mineral technologies, I embarked on a project aimed at presenting their seismic monitoring services in a distinctive and engaging manner. Through two carefully crafted illustrations, I showcased the company's capability to monitor mining sites effectively and issue timely alerts in the event of seismic activities.",
+      "The illustrations delve into the details of how the monitoring service works and the practical applications of this service across six distinct mining activities. The challenge was to seamlessly integrate all the essential details, providing potential clients with a comprehensive understanding, while ensuring the information remained clearly structured and easy to understand.",
+    ],
+    images=[
+      ("k-utec-alerting.webp", "How K-UTEC's seismic monitoring service detects activity at a mining site and issues alerts"),
+      ("k-utec-applications.webp", "Applications of seismic monitoring across six mining activities"),
+    ],
+    thumb="k-utec-alerting-800.webp",
+    cta=CTA_ILLU),
+
+  dict(slug="spacetime", title="Spacetime",
+    body=[
+      "I collaborated with a science communicator creating a series of cartoon illustrations based on a video script about General Relativity and spacetime. The main concept we worked on showcasing is the curvature of spacetime and how it affects planets and light, using a trampoline analogy.",
+      "The target audience for this project are teenagers and youths, so we decided to use illustrations with a colorful and appealing style. The project then involved creating a storyboard to accurately represent the script and help viewers visualize the main concepts, making them more accessible and engaging.",
+    ],
+    images=[
+      ("spacetime1.webp", "Planets and a black hole resting on a trampoline that stands for spacetime"),
+      ("spacetime2.webp", "The Sun curving the trampoline while a planet orbits around it"),
+      ("spacetime3.webp", "A planet following the curve of the trampoline around the Sun"),
+      ("spacetime4.webp", "The Solar System with planets orbiting the Sun in curved spacetime"),
+      ("spacetime5.webp", "Two kids rolling a beam of light across the trampoline"),
+      ("spacetime6.webp", "Light bending around a heavy planet placed on the trampoline"),
+      ("spacetime8.webp", "Paths of light and objects drawn on a curved sheet of spacetime"),
+      ("spacetime9.webp", "Paths curving across the trampoline surface"),
+      ("spacetime7.webp", "A planet and clocks on a grid of curved spacetime"),
+    ],
+    after=["The illustrations I created were later animated by another professional into two educational YouTube videos that you can see below."],
+    videos=[("OdEriCko2j0", "What Exactly is Space time? - Very Easy"), ("yZrqXpvcH9Y", "What Exactly is Space time? - Very Easy - Part 2")],
+    review="Martina was very easy to work with, quick to respond and quick to understand exactly what was needed. Love the end product and can't wait to use the images in my project. Highly recommend Martina for your scientific illustrations!",
+    thumb="spacetime7-800.webp",
+    cta="Would you like to collaborate on scientific illustrations like these?"),
+
+  dict(slug="bad-bug-busters", title="Bad Bug Busters",
+    body=[
+      "Join 9-year-old Amelia on an exciting adventure in \"Bad Bug Busters,\" a self-published book I illustrated. In this engaging tale, Amelia discovers how harmless 'training bugs' in vaccines transform her immune cells into superheroes. These tiny defenders are always on the lookout for danger, ready to swoop in and block, gobble up, or explode bad bugs before they can make her sick.",
+      "Geared towards children aged 6 to 10, \"Bad Bug Busters\" combines scientific accuracy with bright and fun illustrations. I collaborated closely with the author to ensure the bugs and immune cells were depicted authentically while maintaining a playful and inviting atmosphere. This book is not only an entertaining story but also an educational journey into the world of the immune system, making science exciting and accessible for young readers.",
+    ],
+    links=[("https://www.ellamaughan.com/badbugbusters", "Book on the author's website"), ("https://www.amazon.com/dp/B0CP8BLH71", "Order on Amazon")],
+    images=[
+      ("BBB-eBook-Cover.webp", "Cover of Bad Bug Busters: Vaccines vs. Germs, with Amelia surrounded by immune cells and germs"),
+      ("bbb6.webp", "Amelia looking at bubbles with immune cells and bugs inside"),
+      ("bbb7.webp", "Immune cells and germs travelling through a blood vessel"),
+      ("bbb10.webp", "Superhero immune cells in capes fighting germs"),
+      ("bbb12.webp", "Immune cells in capes swooping in on a warning sign"),
+      ("bbb9-2.webp", "Three different bad bugs"),
+      ("bbb11.webp", "An immune cell chasing a germ"),
+    ],
+    review="I partnered with Martina to create my first children's health picture book, Bad Bug Busters: Vaccines vs. Germs, and am thrilled with the final product! Martina was excellent to work with throughout the process. Her communication was clear and timely, she was very receptive to (and patient with) my feedback, and her illustrations perfectly combined scientific accuracy with creativity to engage young readers and bring my story to life. I fully recommend her and hope to partner with her again soon!",
+    thumb="BBB-eBook-Cover-800.webp",
+    cta=CTA_PROJECT),
+
+  dict(slug="the-honest-microbes", title="The honest microbes",
+    body=[
+      "Collaborating with a dentist, I illustrated \"The Honest Microbes,\" a self-published book encouraging children to embrace dental hygiene by introducing them to Streptococcus mutans, the bacteria responsible for dental caries.",
+      "In \"The Honest Microbes,\" we took the concept of these tiny troublemakers a step further. Picture them as adorable microbial families residing within teeth, carving out sugar caves. Each stanza of the book is an insight into these little monsters, and I've crafted a vibrant illustration for each of them.",
+      "Bright and captivating, these illustrations are designed to spark the imaginations of young readers. However, I've made sure that the scientific accuracy shines through: for example, the form of the bacteria closely matches the real one that can be observed with a microscope.",
+    ],
+    images=[
+      ("teeth12.webp", "A family of purple microbes living in a sugar cave inside a tooth"),
+      ("teeth13.webp", "Microbes being washed out of a tooth"),
+      ("teeth0.webp", "Cover of The Honest Microbes"),
+      ("teeth1.webp", "Purple microbes marching on a tooth"),
+      ("teeth3.webp", "A crowd of purple microbes"),
+      ("teeth6.webp", "Microbes on a yellow, sugary tooth surface"),
+      ("teeth8.webp", "Microbes celebrating under falling sprinkles"),
+      ("teeth9.webp", "Microbes swept away by a wave of water"),
+      ("teeth10.webp", "Microbes climbing a tooth"),
+      ("teeth16.webp", "A single purple microbe"),
+    ],
+    review="Martina is a highly skilled professional with a creative mind. She delivers some of the best artwork and always does it on time! Highly recommend her work as she will bring your idea to life with her dedicated work ethic and great attention to detail.",
+    thumb="teeth0-800.webp",
+    cta=CTA_PROJECT),
+
+  dict(slug="brett-the-beaker", title="Brett the beaker",
+    body=[
+      "\"Brett the Beaker\" is an indie book where I had the pleasure of bringing to life the adventures of a tiny beaker within a scientific lab. This delightful story is a playful introduction to lab equipment and scientific exploration, designed to engage young readers.",
+      "My illustrations, with their bright and friendly style, vividly capture the essence of the story. They not only breathe life into the scientific setting but also emphasize diversity among the scientists, featuring women and individuals from various ethnic backgrounds. This makes \"Brett the Beaker\" a colorful journey into the fascinating world of scientific discovery, making learning fun and inclusive for all.",
+    ],
+    images=[
+      ("brett7.webp", "A scientist working at a lab bench"),
+      ("brett9.webp", "A gloved hand pouring liquid from one beaker into another"),
+      ("brett1.webp", "A lab bench with equipment and beakers"),
+      ("brett6.webp", "Brett the beaker sitting on a lab scale"),
+      ("brett4.webp", "A flask filled with blue liquid"),
+      ("brett10.webp", "Brett the beaker wearing sunglasses under a disco ball"),
+      ("brett14.webp", "Brett the beaker being washed in a lab sink"),
+      ("brett15.webp", "A lab celebration with a congratulations banner"),
+    ],
+    review="Amazing! So quick and brought my vision to life.",
+    thumb="brett6-800.webp",
+    cta=CTA_PROJECT),
+
+  dict(slug="sealife-poems", title="A Shore Thing",
+    body=[
+      "In collaboration with a self-published author, I've had the pleasure of creating illustrations for A Shore Thing, her collection of poems centered around sea life. This book, designed for children aged 8 to 12, features captivating poems, each dedicated to a specific marine animal and accompanied by one or more illustrations.",
+      "Scientific accuracy was paramount, ensuring that each illustration faithfully captured the defining features of these creatures. We wanted young readers to not only be entertained but also learn about the fascinating diversity of ocean life, making it easy for them to recognize these marine animals if they encounter them in real life.",
+      "As it was also important to add a touch of humor and fun to the book, the illustrations were crafted to bring a smile to the faces of our young audience. Let's dive into this underwater adventure, where science meets creativity, and explore the sea's wonders in a way that's engaging, educational, and entertaining.",
+    ],
+    images=[
+      ("octopus2.webp", "A multitasking octopus"),
+      ("mussel2.webp", "Mussels holding on tight as a wave crashes"),
+      ("periwinkle.webp", "A periwinkle on a rock saying \"I'm stuffed\""),
+      ("gull1.webp", "A seagull on the beach"),
+      ("sanddollar6.webp", "Sand dollars standing upright: \"Great posture!\""),
+      ("seastar1.webp", "A sea turtle interviewing a sea star"),
+      ("barnacle5.webp", "Barnacles: how you see me, how you don't"),
+      ("urchin3.webp", "A labelled sea urchin with a lantern"),
+      ("beachgoers2.webp", "A snorkeler meeting a fish underwater"),
+      ("lobster1.webp", "A lobster reading a book"),
+      ("sanddollar2.webp", "A sand dollar burrowing: \"Time to hide\""),
+      ("cargo1.webp", "Lost cargo floating at sea"),
+      ("greencrab.webp", "A green crab asking \"Whatcha you lookin' at?\""),
+      ("jelly1.webp", "A child watching jellyfish at an aquarium"),
+      ("beachgoers7.webp", "Crabs painting on the beach: \"You gotta dream big!\""),
+      ("seashells.webp", "A tall column of seashells"),
+    ],
+    review="Great delivery, great service, great artist, great listener. She carefully reviews revision requests and delivers! If you want an excellent job on your project, I highly recommend Martina.",
+    thumb="greencrab-800.webp",
+    cta=CTA_PROJECT),
+
+  dict(slug="neuron-synapses", title="Neuron synapses", layout="solo",
+    body=[
+      "The beneficial effects of physical activity on cognition have been shown in mice, but have been much harder to prove in people. A 2022 study, by contrast, tracked the physical activity of elderly participants, who also agreed to donate their brains when they died. Researchers found that elderly people who remained active had higher levels of proteins that facilitate the exchange of information between neurons.",
+      "The importance of physical activity across many areas of life has been proven by science time and time again. I believe it is important to communicate this concept to younger generations, so I worked on creating a comic illustration of this scientific study. The synapses are symbolized by the two neurons holding hands; with their other hand, they are holding a dumbbell, which shows the role of physical activity in this process. The illustration’s bright, warm colors contribute to creating a positive vibe.",
+    ],
+    images=[("neurons-exercise.webp", "Two neurons holding hands, each lifting a dumbbell with the other hand")],
+    thumb="neurons-exercise-800.webp",
+    cta=CTA_ILLU),
+
+  dict(slug="the-adventures-of-rosie-frankenshmirtz", title="Gil and Rosie go to space",
+    body=[
+      "I had the pleasure of illustrating \"Gil and Rosie go to space,\" an indie-published book aimed at young readers. The story follows Rosie on a journey through the solar system aboard a unique spaceship, where she makes a surprising discovery of life on Jupiter's moon, Europa.",
+      "The book's structure follows the stages of a genuine space mission, providing young readers with an engaging and educational journey. From conceptual study and preliminary analysis to design, development, and the final mission report, Rosie's adventure unfolds, captivating readers at every step.",
+      "My role in this project was to craft engaging illustrations that brought this interstellar narrative to life. I carefully portrayed celestial bodies with precision, ensuring they remained true to their real-world counterparts. Simultaneously, I allowed my imagination to explore and envision fictional life forms, speculating about what might exist beneath the icy surface of Europa, Jupiter's moon.",
+    ],
+    images=[
+      ("aorf11.webp", "A rocket launching through the clouds"),
+      ("aorf6.webp", "Rosie's mission plans and drawings spread on a table"),
+      ("aorf1.webp", "Rosie looking out of a window at plants on the sill"),
+      ("aorf7.webp", "Schematic drawing of Rosie's spaceship"),
+      ("aorf4.webp", "Rosie presenting a chart of the mission stages"),
+      ("aorf3.webp", "The Idea Lab building"),
+      ("aorf10.webp", "Inside the spaceship: a screen reads \"Ocean detected\" above Europa"),
+      ("aorf12.webp", "Imagined life forms beneath Europa's icy surface"),
+      ("aorf13.webp", "A blue alien creature on Europa"),
+      ("aorf8.webp", "The solar system with the Sun and planets"),
+    ],
+    review="Love how it turned out! Martina was professional, helpful, quick, and wonderful at the illustrations!",
+    thumb="aorf5-800.webp",
+    cta=CTA_PROJECT),
+
+  dict(slug="radiomon", title="Radiomon",
+    body=[
+      "I'm thrilled to collaborate with game developers on \"Radiomon,\" an upcoming mobile game that ventures into the fascinating realm of nuclear physics. In \"Radiomon,\" players embark on a journey through natural landscapes, objects, and technologies, zooming in to discover a world of Radiomons, ball-shaped creatures representing elements from the periodic table.",
+      "During the game, Radiomons can transmute and evolve as the player interacts with them, mimicking the dynamic nature of atoms. Whether serene or annoyed, joyful or raging, they're all driven by their decay properties, radiating energy before they slumber.",
+      "With the direction of the game developers, I'm crafting the graphical assets for Radiomon, with a focus on these distinctive Radiomons. Each Radiomon boasts a unique appearance, not only mirroring the element's appearance, but also carrying cool details that hint at its real-world uses and origins.",
+      "This is a fascinating adventure where science and gaming collide, and I'm excited to be part of the team bringing these elemental creatures to life.",
+    ],
+    images=[
+      ("kalium.webp", "Kalium (potassium) Radiomon wearing a banana hat"),
+      ("plumbum.webp", "Plumbum (lead) Radiomon with a helmet and shield"),
+      ("aurum.webp", "Aurum (gold) Radiomon wearing a laurel crown"),
+      ("argentum.webp", "Argentum (silver) Radiomon wearing a tiara"),
+      ("cobalt.webp", "Cobalt Radiomon with blue spiky hair"),
+      ("bismuth.webp", "Bismuth Radiomon with iridescent crystal patterns"),
+      ("helium.webp", "Helium Radiomon wearing a pirate hat"),
+      ("neon.webp", "Neon Radiomon glowing red"),
+      ("ferrum.webp", "Ferrum (iron) Radiomon with a spinning halo"),
+      ("carbon.webp", "Carbon Radiomon, dark and speckled"),
+    ],
+    thumb="bismuth-800.webp",
+    cta=CTA_PROJECT),
+]

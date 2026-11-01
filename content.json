@@ -1,0 +1,921 @@
+{
+  "_readme": "Reference copy of all site text and image lists (the HTML pages are what's served). Images: 'file' = full size in images/<diagrams|comics>/<slug>/, 'thumb' = the 800px file used on index pages. Text copied from the live Google Sites pages on 2026-10-23.",
+  "site": {
+    "name": "Martina Pepiciello",
+    "url": "https://www.martinapepiciello.com",
+    "email": "martinapepiciello@gmail.com",
+    "copyright": "Copyright © 2026 Martina Pepiciello",
+    "nav": [
+      [
+        "Diagrams",
+        "/diagrams/"
+      ],
+      [
+        "Comics",
+        "/comics/"
+      ],
+      [
+        "About",
+        "/about/"
+      ],
+      [
+        "Contact",
+        "/contact/"
+      ]
+    ],
+    "socials": [
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/martina-pepiciello/",
+        "icon": "inline SVG in the footer (white)"
+      },
+      {
+        "label": "Redbubble",
+        "href": "https://www.redbubble.com/people/talesofscience/shop",
+        "icon": "inline SVG in the footer (white)"
+      },
+      {
+        "label": "Behance",
+        "href": "https://www.behance.net/mpepiciello",
+        "icon": "inline SVG in the footer (white)"
+      }
+    ],
+    "logo": "pers-logo-white.webp",
+    "default_description": "Diagrams, infographics and comic illustrations that turn complex ideas into clear visual stories, for science, technology and impact-focused organizations.",
+    "favicon": "favicon.png"
+  },
+  "home": {
+    "heading": "Hi, I'm Martina.",
+    "intro": "I help people in science, technology and impact-focused organizations transform complex ideas into clear visual stories, so that they can drive understanding and action on what matters most.",
+    "cue": "Take a look at my work",
+    "hero_image": "home-header.webp",
+    "diagrams": {
+      "title": "Diagrams and infographics",
+      "subtitle": "Perfect for education, research papers, and presentations",
+      "pills": [
+        "education",
+        "research papers",
+        "presentations"
+      ],
+      "body": [
+        "I make sure important ideas stand out and can be grasped effectively using a clear and bright style.",
+        "With a strong physics background and a deep curiosity for how things work, I take the time to understand the science and purpose behind each illustration. This allows me to craft well-organized and accurate pieces, which are not just visually appealing but also powerful tools for communication."
+      ],
+      "cta": "See more",
+      "featured": [
+        "atoms-in-optical-tweezers",
+        "introduction-to-effective-altruism-infographic",
+        "constitutional-ai-training-diagram",
+        "molecular-neuroscience-processes"
+      ]
+    },
+    "comics": {
+      "title": "Comic illustrations",
+      "subtitle": "ideal for communication and outreach",
+      "pills": [
+        "communication",
+        "outreach"
+      ],
+      "body": [
+        "Comic-style visuals make complex topics more friendly and engaging for non-technical audiences. Through a thoughtful simplification process, I distill scientific and technical concepts into accessible visuals without compromising accuracy.",
+        "This style works for playful, cute illustrations or more serious, thought-provoking narratives and extends the reach of science and impact-driven ideas beyond traditional boundaries."
+      ],
+      "cta": "See more",
+      "featured": [
+        "young-and-old-genes",
+        "the-honest-microbes",
+        "brett-the-beaker",
+        "bad-bug-busters"
+      ]
+    },
+    "testimonials_title": "What clients say",
+    "testimonials": [
+      "Martina is a highly skilled professional with a creative mind. She delivers some of the best artwork and always does it on time! Highly recommend her work as she will bring your idea to life with her dedicated work ethic and great attention to detail.",
+      "I partnered with Martina to create my first children's health picture book, Bad Bug Busters: Vaccines vs. Germs, and am thrilled with the final product! Martina was excellent to work with throughout the process. Her communication was clear and timely, she was very receptive to (and patient with) my feedback, and her illustrations perfectly combined scientific accuracy with creativity to engage young readers and bring my story to life.",
+      "Martina was very easy to work with, quick to respond and quick to understand exactly what was needed. Love the end product and can't wait to use the images in my project."
+    ],
+    "pricing_title": "Pricing and packages",
+    "pricing": [
+      {
+        "title": "Basic illustration or diagram",
+        "body": "The average, single illustration or diagram starts at 100€. Medium-detail pieces may require around 300€."
+      },
+      {
+        "title": "Detailed figure or infographic",
+        "body": "The average infographic or detailed illustration starts at 400€. Especially intricate designs might reach 2000€."
+      },
+      {
+        "title": "Request a quote that suits you",
+        "body": "For the work I do, there is no one-size-fits-all, and these prices just reflect average ranges. Pricing varies widely depending on project scope, timelines, revisions, copyright requirements, and more. Please contact me to get a quote that's tailored to your project, discuss discounts for bulk work, and more."
+      }
+    ],
+    "contact": {
+      "title": "Let's chat!",
+      "body_before_email": "If you like what you're seeing, I'd love to hear from you! Please email me at ",
+      "body_after_email": " telling me about your project, asking a question, or suggesting a time for a quick meeting to talk face-to-face.",
+      "cta": "Contact me"
+    },
+    "logos": [
+      "HIMA",
+      "K-UTEC Salt Technologies",
+      "Effective Altruism Germany",
+      "Max Planck Institute for Evolutionary Biology",
+      "Trinity College Dublin",
+      "Mieux Donner",
+      "Macroscopic Ventures",
+      "UCL",
+      "Maastricht University",
+      "University of Sussex",
+      "Virginia Tech",
+      "Università degli Studi di Udine",
+      "CIBERSAM"
+    ]
+  },
+  "about": {
+    "title": "About me",
+    "cta_home": "Learn more",
+    "home_body": [
+      "I’m a graphic designer with a background in theoretical physics. I specialize in turning complex ideas into clear, compelling visuals. I'm not just creating pretty pictures; I help clients craft a cohesive communication that actually gets results: educating, securing funding, driving real impact, and more.",
+      "I get most energized figuring out how to explain something, whether that’s cutting-edge research, educational content, or world-changing ideas. I dig deep to understand both your technical content and your ultimate goals before creating anything. You can expect a transparent, collaborative process that respects your expertise while bringing fresh visual perspectives to your work.",
+      "Outside of work, you’ll find me out in nature, playing the piano, or getting lost in epic fantasy books."
+    ],
+    "body": [
+      "Hi! I’m Martina Pepiciello, a graphic designer and illustrator based in Bologna, Italy, with a Master's degree in Theoretical Physics.",
+      "I specialize in science, technology, and high-impact communication. I help researchers, educators, and mission-driven organizations transform complex ideas into clear, engaging visuals that inform, persuade, and inspire action.",
+      "## My work",
+      "My work spans from detailed technical illustrations for specialized research to engaging comic-style visuals for public outreach. I don't just make things look good: I make sure your message is crystal clear and engaging, which helps audiences connect with important ideas.",
+      "My background in physics and passion for learning enable me to deeply understand scientific and technical concepts and translate them accurately into visual assets that serve your specific goals. Whether it's a technical infographic, a scientific diagram, or a public-facing explainer, I specialize in identifying the critical elements that will resonate most powerfully with your target audience.",
+      "## What working with me looks like",
+      "My collaborative process starts with thorough research and strategic planning. After an initial consultation to understand your objectives, I'll develop a customized visual approach that balances technical precision with communication effectiveness. Throughout our partnership, you'll receive regular updates with opportunities for feedback at key milestones.",
+      "Unlike generalist illustrators, I bring specialized scientific knowledge that eliminates the learning curve typically associated with technical projects. Clients consistently highlight how my technical background streamlines communication and reduces revision cycles, saving both time and resources.",
+      "I maintain transparent and efficient communication throughout our collaboration. My structured workflow ensures deadlines are met reliably, while allowing flexibility for evolving project needs. Previous clients appreciate my ability to adapt quickly to feedback while ensuring their vision is realized with precision and accuracy.",
+      "Let’s work together to transform complex technical topics or world-changing ideas into clear and compelling visuals that inform, inspire, and create measurable impact."
+    ],
+    "photo": "propic-round.webp",
+    "photo_alt": "Portrait of Martina Pepiciello"
+  },
+  "pages": {
+    "diagrams": {
+      "title": "Diagrams and infographics",
+      "subtitle": "Visually appealing yet accurate diagrams and infographics, to convey your ideas and research clearly and effectively.",
+      "hero_image": "diagrams-header.webp",
+      "buttons": [
+        "More about me",
+        "Contact me"
+      ]
+    },
+    "comics": {
+      "title": "Comic illustrations",
+      "subtitle": "Engaging, thought-provoking comic-style illustrations to communicate science, technology and impactful ideas in an easy-to-understand yet accurate way.",
+      "hero_image": "comics-header.webp (spacetime4)",
+      "buttons": [
+        "More about me",
+        "Contact me"
+      ]
+    }
+  },
+  "diagrams": [
+    {
+      "slug": "data-analysis-framework",
+      "title": "Medical data analysis framework",
+      "page": true,
+      "layout": "solo",
+      "body": [
+        "I had the opportunity to collaborate with the founder of <a href=\"https://terraflow.app/\" rel=\"noopener\" target=\"_blank\">terraFlow</a> to create a diagram illustrating their data analysis framework. terraFlow is a startup that offers an automated pipeline for analyzing complex cytometry datasets, providing researchers with a simplified process to gain insights from their data.",
+        "The figure visually represents the two contrasting approaches to analyzing cytometry data: traditional clustering methods and terraFlow’s approach. The diagram showcases how terraFlow's pipeline identifies explicit cell populations, while the traditional method only leads to the identification of major subtypes.",
+        "My task was to transform an initial sketch with outdated graphics into a clear and engaging diagram. I redesigned, reorganized, and simplified the visuals, while maintaining accuracy in depicting the data analysis processes. This involved strategically using color and layout to enhance the visual flow and highlight the key differences between the two data analysis approaches."
+      ],
+      "thumb": "terraflow-800.webp",
+      "images": [
+        {
+          "file": "terraflow.webp",
+          "alt": "Diagram comparing two ways to analyse cytometry (FCS) data. Top, terraFlow, labelled complete and interpretable: Boolean and nongating combinatorics on CD127 vs CD8 contour plots feed a network analysis coloured by correlation, giving explicit cell populations, and a recursive feature elimination plot of AUC by marker dropped, giving a minimal panel. Bottom, clustering, labelled incomplete and ambiguous: a UMAP cluster plot and a mean fluorescent intensity heatmap that only yield major subtypes."
+        }
+      ],
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "safety-instrumented-systems",
+      "title": "Safety instrumented systems",
+      "page": true,
+      "body": [
+        "I collaborated with <a href=\"https://hima.com/\" rel=\"noopener\" target=\"_blank\">HIMA</a> to create technical diagrams for their paper about the architectures of safety-critical systems. HIMA is a leading expert in safety-related automation solutions, trusted by companies in the process and rail industries worldwide.",
+        "The paper aims to teach students and professionals about safety-critical systems. Safety-critical systems use electrical, electronic, or programmable electronic systems, sometimes with other technologies, to implement safety functions and protect equipment and keep it under control. The paper introduces and explains concepts such as safety instrumented functions, safe failure fraction, and MooN architectures to non-expert audiences.",
+        "As the illustrator, my task was to redesign draft figures provided by the paper authors in a modern and appealing style for both students and professionals; I was also asked to add new illustrations to help make these technical concepts easier to grasp and more visually memorable. My ability to understand and distill complex technical topics was crucial in crafting clear and relevant illustrations that could enhance the readers' comprehension."
+      ],
+      "thumb": "sis-stages-800.webp",
+      "images": [
+        {
+          "file": "sis-architectures.webp",
+          "alt": "Chart of MooN architectures placed by safety (vertical axis) and availability (horizontal axis): 1oo3, 1oo2 and 1oo2D sit in the high-safety zone, 2oo2 in the high-availability zone, 2oo3, 2oo3D and 2oo4D where both zones overlap, and 1oo1 in neither."
+        },
+        {
+          "file": "sis-stages.webp",
+          "alt": "A safety instrumented function in three stages, each with an illustrated device: sensor stage (a pressure transmitter), logic solver stage (a safety PLC) and final element stage (an actuated valve)."
+        },
+        {
+          "file": "sis-1oo2.webp",
+          "alt": "Four cases of a 1oo2 architecture with two channels: the safety instrumented function is not executed only when both channels fail, and is executed whenever at least one channel works."
+        },
+        {
+          "file": "sis-elements.webp",
+          "alt": "Example architecture: three sensors voting 2oo3 in the sensing elements, one safety PLC as the logic solver, and two valves voting 1oo2 as the final elements."
+        },
+        {
+          "file": "sis-signal.webp",
+          "alt": "Signal path from a transmitter to a PLC: the signal is converted from analog to digital for processing (ambient filtering, sensor calibration) and back to analog, sent over a 4-20 mA line, then converted to digital in the PLC and compared to a safety threshold to open or close a safety relay."
+        },
+        {
+          "file": "sis-valve-open.webp",
+          "alt": "Valve cross-section in normal operation: the safety relay is closed and the solenoid energized, so the pilot valve is open, air flows, the steam valve is open and fluid flows."
+        },
+        {
+          "file": "sis-valve-closed.webp",
+          "alt": "Valve cross-section after a safety trip: the safety relay is open and the solenoid deenergized, so the pilot valve is closed, there is no air flow, the steam valve is closed and there is no fluid flow."
+        }
+      ],
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "atoms-in-optical-tweezers",
+      "title": "Atoms in optical tweezers",
+      "page": true,
+      "body": [
+        "I collaborated with a professor from Virginia Tech's Physics Department to create a figure for their paper, <a href=\"https://arxiv.org/abs/2409.05941\" rel=\"noopener\" target=\"_blank\">Scaling of Computational Order Parameters in Rydberg Atom Graph States</a>. The paper focuses on building and testing graph states, a type of quantum state with applications in quantum computing. The researchers aimed to construct these graph states and demonstrate their use for measurement-based quantum computing.",
+        "The figure schematically depicts the experimental setup, showing a two-dimensional array of atoms held in place by optical tweezers, arranged in a square lattice. Each atom represents a vertex of the graph state. Connecting lines visualize the nearest-neighbor interactions between atoms that are used to establish the edges of the graph state. Additionally, the figure indicates a \"domain\" within the array, illustrating the area limited by errors where measurement-based logic can be performed.",
+        "The researcher initially provided an abstract description and a rough sketch of the setup, requiring me to bring it to life and to creatively conceptualize elements like the atom interactions and optical tweezers. The challenge was to create a scientifically accurate and informative illustration while ensuring it was visually appealing. After a couple of proposals and iterations, we settled on the one that was ultimately published."
+      ],
+      "thumb": "atoms-laser_rev1-800.webp",
+      "images": [
+        {
+          "file": "atoms-laser_rev1.webp",
+          "alt": "Published figure: a square lattice of yellow atoms, each held by a red optical tweezer beam, connected by lines showing nearest-neighbour interactions; a dashed blue square marks the domain where measurement-based logic can be performed."
+        },
+        {
+          "file": "atoms-laser_basic.webp",
+          "alt": "Early proposal of the figure with green atoms in a square lattice of optical tweezers and grey connecting lines."
+        },
+        {
+          "file": "atoms-laser_var1.webp",
+          "alt": "Variation of the figure with blue atoms and blue connecting lines."
+        },
+        {
+          "file": "atoms-laser_var2.webp",
+          "alt": "Variation of the figure with blue atoms and lighter blue connecting lines."
+        }
+      ],
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "geology-diagrams",
+      "title": "Geology diagrams",
+      "page": true,
+      "h1": "Geology maps and diagrams",
+      "body": [
+        "I had the opportunity to collaborate with a researcher from Trinity College Dublin to create precise geology maps and diagrams for their paper, <a href=\"https://www.lyellcollection.org/doi/full/10.1144/qjegh2023-043\" rel=\"noopener\" target=\"_blank\">Development of a drought-resilient water supply from dolomitized limestones of the Irish Midlands</a> published in the Quarterly Journal of Engineering Geology and Hydrogeology. This research aimed to identify a drought-resilient groundwater source for the town of Carlow in Ireland. The investigation successfully located a new water supply from dolomitized limestone and revealed a previously unrecorded karst feature.",
+        "The first figure provides an overview of the study area, highlighting the geological setting, key rivers, and locations of private wells used for the initial assessment. The second figure shows the interpretation of surface geophysics surveys, including zones of high and low resistivity, which helped identify potential drilling locations. The third figure presents geological logs of the three shortlisted sites, detailing the composition of the subsurface layers. The final figure shows a conceptual model of the site under pumping conditions, illustrating the connection between surface water and the deeper groundwater flow system.",
+        "The researcher provided hand-drawn sketches and diagrams, as well as some reference images of the target look to achieve. My challenge was to recreate these maps faithfully while cleaning them up and ensuring the information was clear and readable. I devoted special attention to representing different types of information about the same area without sacrificing clarity and highlighting necessary labels."
+      ],
+      "thumb": "geo-map-800.webp",
+      "images": [
+        {
+          "file": "geo-map.webp",
+          "alt": "Geological map of the study area near Carlow, Ireland, showing superficial deposits, bedrock geology, faults, rivers including the Barrow and Fushoge, the town of Carlow, selected agricultural supply wells and cross-section line A-A'."
+        },
+        {
+          "file": "geo-interp.webp",
+          "alt": "Two-part figure: (a) study area investigations map with sites A, B and C, pilot and production wells, 2D resistivity lines and zones of low resistivity; (b) interpreted 2D resistivity sections for lines R-A, R-B and R-C, showing clay, sand and gravel, limestone, karstified limestone and dolomite down to 100 metres."
+        },
+        {
+          "file": "geo-logs.webp",
+          "alt": "Geological logs of five boreholes at sites A, B and C down to 80 metres, showing layers of gravelly clay, clayey sand and gravel, stiff grey clay, black carbonaceous clay, limestone, karstified limestone and dolomite, with grouted intervals, static groundwater levels and main groundwater inflows."
+        },
+        {
+          "file": "geo-cm.webp",
+          "alt": "West-east cross-section A-A' with 25 times vertical exaggeration: the conceptual model of the site under pumping, with rock formations, karstified and dolomitized zones, the Fushoge River and River Barrow, well PA-1, and recharge from the river to the dolomitized zone."
+        }
+      ],
+      "review": "It was a pleasure working with Martina, provided a very prompt and detail-oriented output for a geology/cartography figure. Highly recommended!",
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "constitutional-ai-training-diagram",
+      "title": "Constitutional AI training diagram",
+      "page": true,
+      "layout": "strip",
+      "body": [
+        "This diagram visualizes the training methodology for Constitutional AI, a process designed to align large language models with human values (more specifically, helpfulness and harmlessness) using a set of human-written principles together with feedback provided by AI. It is based on <a href=\"https://arxiv.org/pdf/2212.08073\" rel=\"noopener\" target=\"_blank\">this paper</a> released by Anthropic in 2022.",
+        "The diagram aims to make a complex technical process more accessible and intuitive to understand. It's designed for AI students, researchers who don't specialize in this particular field, and anyone interested in AI alignment with a minimal technical background."
+      ],
+      "thumb": "cai-preview-800.webp",
+      "figure": "built as HTML in the page (see README), not images",
+      "after_images": [
+        "The diagram breaks down the two-phase Constitutional AI training approach: Supervised Learning and Reinforcement Learning. By using a visual flow structure, color coding, and simplified iconography, it transforms abstract concepts into a clear step-by-step process that readers can easily follow and remember.",
+        "My goal was to demystify the technical aspects of AI alignment while maintaining technical accuracy. I focused on creating a clean, structured visual narrative that shows how AI systems can be trained to identify and revise harmful responses according to constitutional principles, without requiring direct human feedback at every step. I maintained a minimal, flat design style to emphasize clarity and reinforce the technical nature of the content while making it approachable for individuals without deep expertise in this domain.",
+        "I approached this challenge by turning the key components of the Constitutional AI methodology into visual elements, including iconography and visual cues that can help readers understand and remember the concepts more effectively. For example, the consistent robot iconography with various distinctive features helps to visualize the different variations of language models that are used throughout the process. I also visualized the connections among the key components through arrows and loops, which help create a more intuitive understanding of the information flow.",
+        "This diagram serves as both an educational tool and a reference guide, allowing viewers to understand the innovative approach to AI alignment that uses AI feedback rather than relying solely on human supervision—a critical advancement for developing safer AI systems as capabilities continue to scale."
+      ],
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "introduction-to-effective-altruism-infographic",
+      "title": "Effective Altruism infographic",
+      "page": true,
+      "h1": "Introduction to Effective Altruism infographic",
+      "layout": "strip",
+      "body": [
+        "This infographic adapts the <a href=\"https://www.effectivealtruism.org/articles/introduction-to-effective-altruism\" rel=\"noopener\" target=\"_blank\">Introduction to Effective Altruism</a> post, aiming to make it more accessible and easier to digest to broaden its potential audience, and to make the ideas more memorable through graphics and data visualizations.",
+        "You can download a full-resolution PDF of the infographic <a href=\"https://drive.google.com/file/d/1bx-hZBfeMZKXdSTf8VeHY95z7o8VnZXy/view?usp=drive_link\" rel=\"noopener\" target=\"_blank\">here</a>. Scroll down for more insights into the creative process!"
+      ],
+      "thumb": "intro-to-ea-preview-800.webp",
+      "figure": "built as HTML in the page (see README), not images",
+      "after_images": [
+        "<h2>Process and strategy</h2>",
+        "<h3>The idea</h3>",
+        "My goal was to make the post more accessible and appealing to a broader audience, specifically people who are not used to reading long-form content on rather technical subjects. This also makes it easier to share with someone who could be interested in the ideas of effective altruism. Finally, I aimed to stay faithful to the content and structure of the original post, since it already includes a very well-crafted narrative that provides an accurate introductory picture of effective altruism.",
+        "<h3>My approach</h3>",
+        "Because combining text and (relevant) graphics improves comprehension, retention, and engagement, I made the ideas presented in the post more memorable and easier to grasp by combining visuals with minimal text. In practice, I visualized as much of the post as I could, and reduced the text to what was strictly necessary to convey the key messages.",
+        "For the introductory section, I focused on showing the dual aspect of effective altruism as both a research field and a community, immediately answering the question in the title \"What is effective altruism?\". I also introduced the effective altruism logo in large size to immediately give viewers a strong visual anchor to associate with effective altruism.",
+        "The examples section was the one I spent the most time on. I decided, for each cause area, to write a short introduction on why the problem is important, accompanied by two data visualizations to \"show, not tell\" (for more details about the data visualizations, see the section below). I also included a timeline with examples of what has been done to address the issues, using diamonds for events with a specific date and gradients for ongoing efforts; I avoided adding more icons to prevent visually cluttering this section.",
+        "For the values section, I chose to represent the four values with icons on a compass, each accompanied by a short explanation. The central element of the compass, often associated with moral values, helps viewers remember that the community is united by a set of values.",
+        "For the section on taking action, I visualized the different possibilities as branching paths a person can take. Once again, this depiction of paths should help reinforce that there are different types of action one can take, and effective altruism is not, e.g., just about donations.",
+        "<h2>Design choices</h2>",
+        "<h3>Overall style</h3>",
+        "For colors and typography, I followed quite closely the <a href=\"https://company-65404.frontify.com/d/hG9FgXLUpVOM/effective-altruism-style-guide#/-/colors\" rel=\"noopener\" target=\"_blank\">Effective Altruism Style Guide</a> to help build a sense of trust and brand consistency, especially since this is an introduction to the movement and first impressions matter.",
+        "I also kept the visual style flat and minimal, again to communicate a sense of trust and the importance of the topic.",
+        "<h3>Data visualizations</h3>",
+        "For the data visualizations that were already present in the original post, I wanted to make them look even more impactful and compelling. While bar charts are certainly more effective at showing the scope of data than just presenting numbers in tables, visualizations that include pictograms can show scope differences even more effectively. For example, you can immediately see that there are about 40 deaths from COVID for each death from terrorism, and seeing 180 stick figures can make you more easily imagine the actual people that could be saved with $1M.",
+        "I also added one data visualization to the AI alignment section and two to the decision-making section for better visual consistency with the other sections. For AI alignment, I showed the rapid progress of AI models with a plot of the computation used to train them, along with reference points of the human and honeybee brain. For decision-making, I estimated and visualized how many people the average US politician can affect, and added a timeline with examples of poor and good decision-making throughout history.",
+        "In general, I aimed to keep the data visualizations as simple as I could, e.g. by removing unit scales from plot axes that are not really necessary to grasp the relation between different areas of the graph, while avoiding compromising understandability."
+      ],
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "molecular-neuroscience-processes",
+      "title": "Molecular neuroscience processes",
+      "page": true,
+      "body": [
+        "I had the pleasure to work with a researcher from Università degli Studi di Udine to create the figures for their publication in Frontiers in Molecular Neuroscience. The paper, titled <a href=\"https://www.frontiersin.org/journals/molecular-neuroscience/articles/10.3389/fnmol.2023.1166879/full\" rel=\"noopener\" target=\"_blank\">Is Drp1 a link between mitochondrial dysfunction and inflammation in Alzheimer’s disease?</a>, examines the role of inflammation in Alzheimer's disease.",
+        "The first figure provides a visual overview of how a multi-protein complex called the NLRP3 inflammasome is activated in two steps. The second figure illustrates how a protein called Drp1 contributes to the assembly of the NLRP3 inflammasome.",
+        "I was tasked with transforming the researcher's hand-drawn sketches into clear and engaging figures. The challenge was to bring these sketches to life while accurately representing the complex biological processes described in the paper. I organized the information as clearly as possible, using visual cues to emphasize different parts of the processes. By employing a carefully selected color palette, I ensured that the different elements in the figures were easily distinguishable while maintaining visual cohesion and avoiding overwhelming the viewer with too many colors."
+      ],
+      "thumb": "drp1-nlrp3-800.webp",
+      "images": [
+        {
+          "file": "nlrp3-activation.webp",
+          "alt": "Cell diagram of NLRP3 inflammasome activation. Priming: IL1β, TNFα and LPS bind their receptors and activate NFkB, which switches on Casp1, Il1β, Il18 and Nlrp3 genes in the nucleus. Activation: mitochondrial ROS, mtoxDNA and MAMs, plus potassium efflux through P2X7 and TWIK2 channels, trigger assembly of NLRP3, ASC and pro-caspase 1 into the inflammasome; caspase 1 then matures IL1β and IL18 for secretion, and cleaved gasdermin D forms pores that cause pyroptosis."
+        },
+        {
+          "file": "drp1-nlrp3.webp",
+          "alt": "A microglial cell with the RAGE receptor binding Aβ and AGE, and a zoomed-in panel: Aβ activates TXNIP, which leads to phosphorylation of Drp1; Drp1 causes mitochondrial fragmentation, raising ROS and freeing TXNIP to bind NLRP3, which assembles the NLRP3 inflammasome, leading to cytokine secretion and pyroptosis."
+        }
+      ],
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "aml-research-program",
+      "title": "Acute myeloid leukemia research program",
+      "page": false,
+      "body": [],
+      "thumb": "aml-800.webp",
+      "images": [
+        {
+          "file": "aml.webp",
+          "alt": "Acute myeloid leukemia research program: four work packages studying CyPD in mitochondria and in AML patients"
+        }
+      ]
+    }
+  ],
+  "comics": [
+    {
+      "slug": "young-and-old-genes",
+      "title": "Young and old genes",
+      "page": true,
+      "body": [
+        "A study has shown that the age of a gene determines how fast they adapt.",
+        "In 1932, Sewall Wright introduced the metaphor of the “fitness landscape” model, where evolving genetic populations “walk” toward a fitness peak, just like a hiker slowly making its way to the top of the mountain. In 1998, Orr demonstrated that the further away a population is from its fitness peak, the larger the steps it makes.",
+        "One prediction of this theory is that recently evolved, or “young”, genes tend to accumulate more adaptive mutations with larger effects than older genes because they are further away from their fitness peak. This hypothesis was successfully tested and confirmed in a 2022 study.",
+        "After the researcher explained to me this interesting hiking metaphor for genes, I created a sketch of how I envision it.",
+        "Then, we worked together on better characterizing the young and old genes. We made the young gene more saturated than the old one, and gave it a lighter backpack. We also gave the old genes some classical “grandfather” features.",
+        "We showed that the young gene is walking faster by having it take a larger step and adding an air motion effect behind it."
+      ],
+      "thumb": "genes-young-old-800.webp",
+      "images": [
+        {
+          "file": "genes-young-old.webp",
+          "alt": "Two genes drawn as DNA helices hiking up a mountain towards a flag on the peak, past a sign reading \"Way towards fitness peak\". The bright orange young gene, with a small backpack, takes a big running step leaving a puff of dust; the pale old gene, with glasses, a white beard, a walking stick and a large backpack, walks ahead near the summit."
+        },
+        {
+          "file": "genes-young-old-color-sketch.webp",
+          "alt": "Early colour sketch of the illustration: an orange young gene running up a grey mountain behind a pale old gene with a walking stick, near a flag on the peak."
+        }
+      ],
+      "review": "I really enjoyed working with Martina, communication was super easy, and we reached the final version of the illustration quite fast. I highly recommend Martina for scientific illustrations :)",
+      "cta": "Would you like to collaborate on a scientific illustration like this one?"
+    },
+    {
+      "slug": "noisy-genes",
+      "title": "Noisy genes",
+      "page": true,
+      "layout": "solo",
+      "body": [
+        "In a 2023 study, scientists dived into the world of gene expression, focusing on the intriguing concept of gene expression noise. Genes act as the blueprints for our bodies, and they must function precisely, similar to the way workers in an office must complete their tasks accurately.",
+        "Gene expression noise is like the occasional unpredictability in how genes carry out their instructions. Inside our cells, genes work to produce proteins, but sometimes they don't follow the script precisely. This inherent randomness in gene behavior is referred to as \"gene expression noise.\" This study highlights that the location of genes in this network plays a crucial role. Some genes need to be precise because their errors affect the entire network, just as a disruptive colleague can impact the entire office. Others can be less precise because their mistakes have less impact.",
+        "I had the privilege of collaborating closely with one of the paper's authors to bring to life their concept of genes as workers connected by a network. The illustration portrays two scenarios within a group of genes. In the first scenario, a gene occupies a central position, and when it makes a mistake (produces noise), it affects all the other genes connected to it via cables, much like a noisy coworker disrupting others in a shared workspace. In the second scenario, a gene is positioned at the edge, and when it makes an error, it doesn't disrupt the entire office because it's not as central to the network."
+      ],
+      "thumb": "genes-network2-800.webp",
+      "images": [
+        {
+          "file": "genes-network2.webp",
+          "alt": "Genes drawn as DNA helices working at office desks connected by cables, in two panels. On the left, a central gene shouting into a megaphone disturbs all the connected coworkers; on the right, a noisy gene at the edge of the network barely affects the others."
+        }
+      ],
+      "review": "This was a very nice and constructive collaboration. I am looking very forward to the next occasion to use Martina's skills!",
+      "cta": "Would you like to collaborate on a scientific illustration like this one?"
+    },
+    {
+      "slug": "faults-errors-failures",
+      "title": "Faults, errors, failures",
+      "page": true,
+      "body": [
+        "I had the pleasure to collaborate with <a href=\"https://hima.com/\" rel=\"noopener\" target=\"_blank\">HIMA</a>, a German company specializing in safety-related automation solutions, on a project delving into the world of functional safety. The aim was to make the topics of faults, errors, and failures more approachable for university students. In partnership with HIMA, who authored a paper on these subjects, I created a series of illustrations to complement their insights. The illustrations explore the distinctions between faults, errors, and failures, provide examples, and highlight preventive measures. Together, we strived to bring vibrancy to the often perceived dry realm of functional safety, making it more engaging and memorable for students."
+      ],
+      "thumb": "safety6-800.webp",
+      "images": [
+        {
+          "file": "safety1.webp",
+          "alt": "A purple monster labelled faults, errors and failures, covered in threats such as code, settings and checklists, attacks a computer labelled System, which turns into a smoking computer with a cracked screen labelled Loss of functionality."
+        },
+        {
+          "file": "safety2.webp",
+          "alt": "Two code windows with a bug inside function b: calling function a gives a green tick, labelled fault, no error; calling function b gives a red cross, labelled fault, error."
+        },
+        {
+          "file": "safety5.webp",
+          "alt": "Fault, error, failure in sequence: a bug in a program (fault) flips the bits 1, 0, 0, 1 (error), and a computer shows a skull and crossbones (failure)."
+        },
+        {
+          "file": "safety6.webp",
+          "alt": "Four comic panels: fault prevention, a man at a computer showing a crossed-out bug; fault removal, a worker shovelling bugs off a program; fault tolerance, a woman calmly working on a laptop with a bug on her shoulder; fault forecasting, a fortune teller seeing a bug in a crystal ball."
+        }
+      ],
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "seismic-monitoring",
+      "title": "Seismic monitoring",
+      "page": true,
+      "h1": "Seismic monitoring in mines",
+      "body": [
+        "Teaming up with K-UTEC, a German company at the forefront of salt and mineral technologies, I embarked on a project aimed at presenting their seismic monitoring services in a distinctive and engaging manner. Through two carefully crafted illustrations, I showcased the company's capability to monitor mining sites effectively and issue timely alerts in the event of seismic activities.",
+        "The illustrations delve into the details of how the monitoring service works and the practical applications of this service across six distinct mining activities. The challenge was to seamlessly integrate all the essential details, providing potential clients with a comprehensive understanding, while ensuring the information remained clearly structured and easy to understand."
+      ],
+      "thumb": "k-utec-alerting-800.webp",
+      "images": [
+        {
+          "file": "k-utec-alerting.webp",
+          "alt": "How K-UTEC's seismic monitoring works: seismometers at the customer's mine measure microseismicity, a GeoLog unit sends the data to the cloud, experts at K-UTEC's global monitoring centre in Germany analyse it around the clock and report event locations and magnitudes to the customer's control centre, which can respond with measures such as staff evacuation or tunnel strengthening."
+        },
+        {
+          "file": "k-utec-applications.webp",
+          "alt": "Six applications of microseismic monitoring, each shown as a cross-section and a map: mining, geothermal energy, caverns, oil and gas, energy storage, and carbon capture and storage, with microseismic incidents marked by month."
+        }
+      ],
+      "cta": "Would you like to collaborate on a scientific illustration like this one?"
+    },
+    {
+      "slug": "spacetime",
+      "title": "Spacetime",
+      "page": true,
+      "body": [
+        "I collaborated with a science communicator creating a series of cartoon illustrations based on a video script about General Relativity and spacetime. The main concept we worked on showcasing is the curvature of spacetime and how it affects planets and light, using a trampoline analogy.",
+        "The target audience for this project are teenagers and youths, so we decided to use illustrations with a colorful and appealing style. The project then involved creating a storyboard to accurately represent the script and help viewers visualize the main concepts, making them more accessible and engaging."
+      ],
+      "thumb": "spacetime7-800.webp",
+      "images": [
+        {
+          "file": "spacetime1.webp",
+          "alt": "A trampoline standing for spacetime, with a small planet, a ringed planet, the Sun and a black hole resting on it, each making a deeper dip in the surface."
+        },
+        {
+          "file": "spacetime2.webp",
+          "alt": "The Sun sinking deep into the middle of the trampoline while smaller planets, including Earth, roll towards it."
+        },
+        {
+          "file": "spacetime3.webp",
+          "alt": "Planets including Earth circling the Sun around the dip it makes in the trampoline, shown with curved arrows."
+        },
+        {
+          "file": "spacetime4.webp",
+          "alt": "The Solar System in space: the Sun with the planets and the asteroid belt on their orbits."
+        },
+        {
+          "file": "spacetime5.webp",
+          "alt": "Two kids sitting on opposite sides of the trampoline, one shining a beam of light straight across to the other."
+        },
+        {
+          "file": "spacetime6.webp",
+          "alt": "The same two kids with a ringed planet between them: the beam of light bends around the dip the planet makes in the trampoline."
+        },
+        {
+          "file": "spacetime8.webp",
+          "alt": "Three ways light can change direction: 1, reflecting off a mirror; 2, curving through the bent grid of spacetime around a planet; 3, scattering off particles."
+        },
+        {
+          "file": "spacetime9.webp",
+          "alt": "Two light beams travelling across the trampoline, both labelled c = 300,000 km/s: one goes straight, the other curves around a ringed planet."
+        },
+        {
+          "file": "spacetime7.webp",
+          "alt": "A ringed planet bending a glowing grid of spacetime, with light paths curving around it and two pocket watches, one near the planet and one farther away."
+        }
+      ],
+      "after_images": [
+        "The illustrations I created were later animated by another professional into two educational YouTube videos that you can see below."
+      ],
+      "youtube": [
+        "OdEriCko2j0",
+        "yZrqXpvcH9Y"
+      ],
+      "review": "Martina was very easy to work with, quick to respond and quick to understand exactly what was needed. Love the end product and can't wait to use the images in my project. Highly recommend Martina for your scientific illustrations!",
+      "cta": "Would you like to collaborate on scientific illustrations like these?"
+    },
+    {
+      "slug": "bad-bug-busters",
+      "title": "Bad Bug Busters",
+      "page": true,
+      "body": [
+        "Join 9-year-old Amelia on an exciting adventure in \"Bad Bug Busters,\" a self-published book I illustrated. In this engaging tale, Amelia discovers how harmless 'training bugs' in vaccines transform her immune cells into superheroes. These tiny defenders are always on the lookout for danger, ready to swoop in and block, gobble up, or explode bad bugs before they can make her sick.",
+        "Geared towards children aged 6 to 10, \"Bad Bug Busters\" combines scientific accuracy with bright and fun illustrations. I collaborated closely with the author to ensure the bugs and immune cells were depicted authentically while maintaining a playful and inviting atmosphere. This book is not only an entertaining story but also an educational journey into the world of the immune system, making science exciting and accessible for young readers."
+      ],
+      "links": [
+        {
+          "href": "https://www.ellamaughan.com/badbugbusters",
+          "text": "Book on the author's website"
+        },
+        {
+          "href": "https://www.amazon.com/dp/B0CP8BLH71",
+          "text": "Order on Amazon"
+        }
+      ],
+      "thumb": "BBB-eBook-Cover-800.webp",
+      "images": [
+        {
+          "file": "BBB-eBook-Cover.webp",
+          "alt": "Cover of Bad Bug Busters: Vaccines vs. Germs, written by Ella Maughan, PhD, and illustrated by Martina Pepiciello, MSc: a smiling blonde girl surrounded by cartoon germs and caped immune cells on a pink background."
+        },
+        {
+          "file": "bbb6.webp",
+          "alt": "Amelia after a vaccine, with zoomed-in bubbles showing harmless training bugs on one side and germs meeting her immune cells on the other."
+        },
+        {
+          "file": "bbb7.webp",
+          "alt": "Inside a blood vessel, caped immune cells patrol among red blood cells and small germs, one looking through binoculars."
+        },
+        {
+          "file": "bbb10.webp",
+          "alt": "Caped superhero immune cells fighting bad bugs: one gobbles up a yellow bacterium, one blocks a blue virus, and another destroys an infected cell."
+        },
+        {
+          "file": "bbb12.webp",
+          "alt": "Caped immune cells flying in, one holding up a yellow warning sign."
+        },
+        {
+          "file": "bbb9-2.webp",
+          "alt": "Three bad bugs with grumpy faces dressed in coats and cloaks to hide."
+        },
+        {
+          "file": "bbb11.webp",
+          "alt": "A caped immune cell swallowing a germ, then happily moving on next to another caped cell."
+        }
+      ],
+      "review": "I partnered with Martina to create my first children's health picture book, Bad Bug Busters: Vaccines vs. Germs, and am thrilled with the final product! Martina was excellent to work with throughout the process. Her communication was clear and timely, she was very receptive to (and patient with) my feedback, and her illustrations perfectly combined scientific accuracy with creativity to engage young readers and bring my story to life. I fully recommend her and hope to partner with her again soon!",
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "the-honest-microbes",
+      "title": "The honest microbes",
+      "page": true,
+      "body": [
+        "Collaborating with a dentist, I illustrated \"The Honest Microbes,\" a self-published book encouraging children to embrace dental hygiene by introducing them to Streptococcus mutans, the bacteria responsible for dental caries.",
+        "In \"The Honest Microbes,\" we took the concept of these tiny troublemakers a step further. Picture them as adorable microbial families residing within teeth, carving out sugar caves. Each stanza of the book is an insight into these little monsters, and I've crafted a vibrant illustration for each of them.",
+        "Bright and captivating, these illustrations are designed to spark the imaginations of young readers. However, I've made sure that the scientific accuracy shines through: for example, the form of the bacteria closely matches the real one that can be observed with a microscope."
+      ],
+      "thumb": "teeth0-800.webp",
+      "images": [
+        {
+          "file": "teeth12.webp",
+          "alt": "Purple microbe miners in yellow hard hats dig a cave into a tooth with pickaxes, filling a mine cart with sugar."
+        },
+        {
+          "file": "teeth13.webp",
+          "alt": "A dentist's water spray blasts out a cave inside a tooth, where the microbes had a little desk and chair, while the purple microbes cry."
+        },
+        {
+          "file": "teeth0.webp",
+          "alt": "Cover of The Honest Microbes: Encouraging children to brush their teeth, written by Lyubov Krut, DDS, and illustrated by Martina Pepiciello: purple microbes among teeth and falling candy."
+        },
+        {
+          "file": "teeth1.webp",
+          "alt": "A family of four purple microbes, in hats and hair bows, stands in front of caves dug into a tooth, with a mine cart of sugar."
+        },
+        {
+          "file": "teeth3.webp",
+          "alt": "A huge crowd of purple microbes, some eating candy and ice cream, fills the gum line between two teeth."
+        },
+        {
+          "file": "teeth6.webp",
+          "alt": "Purple microbes floating and swimming in a sea of yellow, sugary liquid between the teeth, one on a rubber ring."
+        },
+        {
+          "file": "teeth8.webp",
+          "alt": "Purple microbes cheering and catching candy, lollipops and sweets raining down onto the gums."
+        },
+        {
+          "file": "teeth9.webp",
+          "alt": "A wave of water and toothpaste washes the purple microbes away from the teeth."
+        },
+        {
+          "file": "teeth10.webp",
+          "alt": "Three angry purple microbes standing on the gum between two teeth, while others are flung into the air."
+        },
+        {
+          "file": "teeth16.webp",
+          "alt": "A single shocked purple microbe with pigtails, standing next to a toothbrush."
+        }
+      ],
+      "review": "Martina is a highly skilled professional with a creative mind. She delivers some of the best artwork and always does it on time! Highly recommend her work as she will bring your idea to life with her dedicated work ethic and great attention to detail.",
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "brett-the-beaker",
+      "title": "Brett the beaker",
+      "page": true,
+      "body": [
+        "\"Brett the Beaker\" is an indie book where I had the pleasure of bringing to life the adventures of a tiny beaker within a scientific lab. This delightful story is a playful introduction to lab equipment and scientific exploration, designed to engage young readers.",
+        "My illustrations, with their bright and friendly style, vividly capture the essence of the story. They not only breathe life into the scientific setting but also emphasize diversity among the scientists, featuring women and individuals from various ethnic backgrounds. This makes \"Brett the Beaker\" a colorful journey into the fascinating world of scientific discovery, making learning fun and inclusive for all."
+      ],
+      "thumb": "brett6-800.webp",
+      "images": [
+        {
+          "file": "brett7.webp",
+          "alt": "A scientist with long curly hair, in a lab coat and blue gloves, reaches for a smiling beaker on a lab shelf."
+        },
+        {
+          "file": "brett9.webp",
+          "alt": "A gloved hand pours powder from a beaker held with tongs, next to two smiling beakers of green and pink liquid."
+        },
+        {
+          "file": "brett1.webp",
+          "alt": "A lab bench with friendly, smiling equipment: a glove box, a balance, a small worried beaker, a fume extractor and a rack of test tubes."
+        },
+        {
+          "file": "brett6.webp",
+          "alt": "A happy beaker of water on a stirring hot plate, while a small beaker in the background thinks \"Soon I hope I will get a job too!\""
+        },
+        {
+          "file": "brett4.webp",
+          "alt": "A sparkling flask of swirling blue-green liquid with a smiling face."
+        },
+        {
+          "file": "brett10.webp",
+          "alt": "Brett, a small beaker, daydreams about being a cool purple beaker wearing rainbow sunglasses under a disco ball."
+        },
+        {
+          "file": "brett14.webp",
+          "alt": "Two panels: a gloved scientist washes Brett with a brush at the lab sink, then Brett shines clean and yellow under the spotlights."
+        },
+        {
+          "file": "brett15.webp",
+          "alt": "A lab party with a \"Congratulations Brett\" banner, balloons, and the lab equipment wearing party hats, while Brett wears a crown."
+        }
+      ],
+      "review": "Amazing! So quick and brought my vision to life.",
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "sealife-poems",
+      "title": "A Shore Thing",
+      "page": true,
+      "body": [
+        "In collaboration with a self-published author, I've had the pleasure of creating illustrations for A Shore Thing, her collection of poems centered around sea life. This book, designed for children aged 8 to 12, features captivating poems, each dedicated to a specific marine animal and accompanied by one or more illustrations.",
+        "Scientific accuracy was paramount, ensuring that each illustration faithfully captured the defining features of these creatures. We wanted young readers to not only be entertained but also learn about the fascinating diversity of ocean life, making it easy for them to recognize these marine animals if they encounter them in real life.",
+        "As it was also important to add a touch of humor and fun to the book, the illustrations were crafted to bring a smile to the faces of our young audience. Let's dive into this underwater adventure, where science meets creativity, and explore the sea's wonders in a way that's engaging, educational, and entertaining."
+      ],
+      "thumb": "greencrab-800.webp",
+      "images": [
+        {
+          "file": "octopus2.webp",
+          "alt": "An octopus says \"I'm a multi-tasking mollusc\" while using its arms to fish, hold a fish, juggle a football, drink, type on a keyboard, hold a torch and a phone, and carry seaweed."
+        },
+        {
+          "file": "mussel2.webp",
+          "alt": "A cluster of worried mussels clinging to a rock shout \"Hold on tight!\" as a big wave crashes towards them and a gull flies overhead."
+        },
+        {
+          "file": "periwinkle.webp",
+          "alt": "Periwinkle snails grazing on a seaweed-covered rock, one saying \"I'm stuffed\"."
+        },
+        {
+          "file": "gull1.webp",
+          "alt": "A herring gull in a blue beanie standing on the beach at the water's edge, next to a pile of seaweed."
+        },
+        {
+          "file": "sanddollar6.webp",
+          "alt": "Sand dollars on the seabed, some lying flat and some standing upright; one thinks \"Great posture!\" and another replies \"Thanks\"."
+        },
+        {
+          "file": "seastar1.webp",
+          "alt": "A sea turtle holding a microphone interviews a smiling sea star."
+        },
+        {
+          "file": "barnacle5.webp",
+          "alt": "Two barnacles: one with its feathery legs out says \"Now you see me\", the other, shut tight, says \"Now you don't\"."
+        },
+        {
+          "file": "urchin3.webp",
+          "alt": "A sea urchin with its mouthparts labelled: Aristotle's lantern, jaw plates, mouth opening, teeth and jaw muscle; a seahorse holds a glowing lantern from its tail."
+        },
+        {
+          "file": "beachgoers2.webp",
+          "alt": "A boy snorkelling underwater comes face to face with a surprised yellow fish."
+        },
+        {
+          "file": "lobster1.webp",
+          "alt": "A lobster leaning on a rock reads a book called \"Seas the Day\"."
+        },
+        {
+          "file": "sanddollar2.webp",
+          "alt": "A sand dollar burrowing into the sand thinks \"Time to hide\"."
+        },
+        {
+          "file": "cargo1.webp",
+          "alt": "Two shipping containers floating in the sea near a small island; one says \"I feel seasick\" and the other replies \"Seriously?\""
+        },
+        {
+          "file": "greencrab.webp",
+          "alt": "A green crab standing over clams in the sand asks \"Whadda you lookin at?\""
+        },
+        {
+          "file": "jelly1.webp",
+          "alt": "The silhouette of a child at an aquarium window, waving at three purple jellyfish."
+        },
+        {
+          "file": "beachgoers7.webp",
+          "alt": "Two crabs in hard hats next to an easel with a sandcastle blueprint; one says \"You gotta dream big!\""
+        },
+        {
+          "file": "seashells.webp",
+          "alt": "A tall rock covered in many different seashells."
+        }
+      ],
+      "review": "Great delivery, great service, great artist, great listener. She carefully reviews revision requests and delivers! If you want an excellent job on your project, I highly recommend Martina.",
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "neuron-synapses",
+      "title": "Neuron synapses",
+      "page": true,
+      "layout": "solo",
+      "body": [
+        "The beneficial effects of physical activity on cognition have been shown in mice, but have been much harder to prove in people. A 2022 study, by contrast, tracked the physical activity of elderly participants, who also agreed to donate their brains when they died. Researchers found that elderly people who remained active had higher levels of proteins that facilitate the exchange of information between neurons.",
+        "The importance of physical activity across many areas of life has been proven by science time and time again. I believe it is important to communicate this concept to younger generations, so I worked on creating a comic illustration of this scientific study. The synapses are symbolized by the two neurons holding hands; with their other hand, they are holding a dumbbell, which shows the role of physical activity in this process. The illustration’s bright, warm colors contribute to creating a positive vibe."
+      ],
+      "thumb": "neurons-exercise-800.webp",
+      "images": [
+        {
+          "file": "neurons-exercise.webp",
+          "alt": "Two cheerful pink neurons wearing sweatbands hold hands, forming a synapse, while each lifts a dumbbell with its other hand."
+        }
+      ],
+      "cta": "Would you like to collaborate on a scientific illustration like this one?"
+    },
+    {
+      "slug": "the-adventures-of-rosie-frankenshmirtz",
+      "title": "Gil and Rosie go to space",
+      "page": true,
+      "body": [
+        "I had the pleasure of illustrating \"Gil and Rosie go to space,\" an indie-published book aimed at young readers. The story follows Rosie on a journey through the solar system aboard a unique spaceship, where she makes a surprising discovery of life on Jupiter's moon, Europa.",
+        "The book's structure follows the stages of a genuine space mission, providing young readers with an engaging and educational journey. From conceptual study and preliminary analysis to design, development, and the final mission report, Rosie's adventure unfolds, captivating readers at every step.",
+        "My role in this project was to craft engaging illustrations that brought this interstellar narrative to life. I carefully portrayed celestial bodies with precision, ensuring they remained true to their real-world counterparts. Simultaneously, I allowed my imagination to explore and envision fictional life forms, speculating about what might exist beneath the icy surface of Europa, Jupiter's moon."
+      ],
+      "thumb": "aorf5-800.webp",
+      "images": [
+        {
+          "file": "aorf11.webp",
+          "alt": "Rosie's spaceship drills down through Europa's icy crust into the ocean below."
+        },
+        {
+          "file": "aorf6.webp",
+          "alt": "Mission plans spread on a table: a map of the solar system, a diagram of Europa's layers (crust, water, mantle and core), Jupiter with its moons Io, Europa, Ganymede and Callisto, and a blueprint of the spaceship."
+        },
+        {
+          "file": "aorf1.webp",
+          "alt": "Rosie, a girl with curly hair and a yellow headband, waters a row of potted plants named Flora, Alyssa, Laurel, Camilla and Fern on a sunny windowsill."
+        },
+        {
+          "file": "aorf7.webp",
+          "alt": "Rosie's homemade spaceship, built from odds and ends such as a toothbrush, a bell, ice cream cones and scissors."
+        },
+        {
+          "file": "aorf4.webp",
+          "alt": "A teacher points to a poster of the scientific method: observation, question, hypothesis, prediction, experiment, analysis, then confirmation or contradiction, and results."
+        },
+        {
+          "file": "aorf3.webp",
+          "alt": "The Idea Lab, an orange building with a satellite dish and a telescope on the roof, among trees and grass."
+        },
+        {
+          "file": "aorf10.webp",
+          "alt": "Inside the spaceship, a porthole looks out at Europa's cracked surface while a screen reads \"Ocean detected\"."
+        },
+        {
+          "file": "aorf12.webp",
+          "alt": "Life imagined under Europa's ice: colourful rock spires on the ocean floor, a curious creature peeking out and small glowing organisms floating in the water."
+        },
+        {
+          "file": "aorf13.webp",
+          "alt": "A blue, many-armed creature from Europa's ocean, wearing a napkin and holding a plate and a fork."
+        },
+        {
+          "file": "aorf8.webp",
+          "alt": "Space with Jupiter, Mars, asteroids, comets and spiral galaxies, and the Sun peeking in at the bottom."
+        }
+      ],
+      "review": "Love how it turned out! Martina was professional, helpful, quick, and wonderful at the illustrations!",
+      "cta": "Would you like to collaborate on a project like this one?"
+    },
+    {
+      "slug": "radiomon",
+      "title": "Radiomon",
+      "page": true,
+      "body": [
+        "I'm thrilled to collaborate with game developers on \"Radiomon,\" an upcoming mobile game that ventures into the fascinating realm of nuclear physics. In \"Radiomon,\" players embark on a journey through natural landscapes, objects, and technologies, zooming in to discover a world of Radiomons, ball-shaped creatures representing elements from the periodic table.",
+        "During the game, Radiomons can transmute and evolve as the player interacts with them, mimicking the dynamic nature of atoms. Whether serene or annoyed, joyful or raging, they're all driven by their decay properties, radiating energy before they slumber.",
+        "With the direction of the game developers, I'm crafting the graphical assets for Radiomon, with a focus on these distinctive Radiomons. Each Radiomon boasts a unique appearance, not only mirroring the element's appearance, but also carrying cool details that hint at its real-world uses and origins.",
+        "This is a fascinating adventure where science and gaming collide, and I'm excited to be part of the team bringing these elemental creatures to life."
+      ],
+      "thumb": "bismuth-800.webp",
+      "images": [
+        {
+          "file": "kalium.webp",
+          "alt": "Kalium (potassium) Radiomon: a cream, speckled ball with a big smile, wearing a hat piled with bananas, broccoli and a potato."
+        },
+        {
+          "file": "plumbum.webp",
+          "alt": "Plumbum (lead) Radiomon: a grey ball with a confident look, wearing an army helmet and a belt of bullets and carrying a shield."
+        },
+        {
+          "file": "aurum.webp",
+          "alt": "Aurum (gold) Radiomon: a shining golden ball wearing a laurel wreath and a white toga, holding a quill."
+        },
+        {
+          "file": "argentum.webp",
+          "alt": "Argentum (silver) Radiomon: a silver ball with grey hair, a tiara, a pearl necklace and purple earrings."
+        },
+        {
+          "file": "cobalt.webp",
+          "alt": "Cobalt Radiomon: a blue ball with a mohawk, pointed ears with earrings and a mischievous grin."
+        },
+        {
+          "file": "bismuth.webp",
+          "alt": "Bismuth Radiomon: a ball covered in iridescent, rainbow-coloured square spiral crystals."
+        },
+        {
+          "file": "helium.webp",
+          "alt": "Helium Radiomon: a bubbly yellow cloud wearing a tricorn hat with a blue feather."
+        },
+        {
+          "file": "neon.webp",
+          "alt": "Neon Radiomon: a glowing red and yellow ball with an angry look, wearing an Elizabethan ruff collar."
+        },
+        {
+          "file": "ferrum.webp",
+          "alt": "Ferrum (iron) Radiomon: a grey armoured ball with a frown, a hammer, a rusty patch and a swirling ring above its head."
+        },
+        {
+          "file": "carbon.webp",
+          "alt": "Carbon Radiomon: a smiling black ball, part coal and part wood, studded with sparkling diamonds."
+        }
+      ],
+      "cta": "Would you like to collaborate on a project like this one?"
+    }
+  ],
+  "contact_page": {
+    "title": "Contact me",
+    "body": [
+      "If you would like to chat about a collaboration, discuss how my approach to visual communication can contribute to your goals, or you just have any questions, please send me an email! I will respond within one business day.",
+      "You can get in touch with me at martinapepiciello@gmail.com.",
+      "I look forward to hearing about the impact you're working to create!"
+    ],
+    "image": "about/coffee-mug.webp"
+  },
+  "not_on_live_site": [
+    "comics/immunology1bg.webp",
+    "comics/immunology2bg.webp",
+    "bad-bug-busters: bbb0, bbb13, bbb14, bbb15",
+    "faults-errors-failures: safety3, safety4, safety7",
+    "radiomon: nickel",
+    "the-adventures-of-rosie-frankenshmirtz: aorf5 (used only as the Comics index thumbnail)"
+  ]
+}
