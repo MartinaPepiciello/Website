@@ -112,13 +112,14 @@
     const band = 38 * unit, r = 30 * unit, fill = 'rgb(4 178 190 / .3)';
     const [fx, fy] = at(woman, box, 139.4, 5424);                                   // under her feet
     const right = rect(list, box).r;
-    const k = 62 * unit / 275;                                                      // arrow 62 units long
+    const k = band / 90;                                                            // shaft as thick as the path
     list.querySelectorAll('li').forEach(li => {
       const ic = rect(li.querySelector('svg'), box), cx = (ic.l + ic.r) / 2, cy = (ic.t + ic.b) / 2;
       // the path ends at the icon's centre, hidden behind it
       path(s, rounded([[fx, fy], [fx, cy], [cx, cy]], r), { fill: 'none', stroke: fill, 'stroke-width': band }, li);
-      const x0 = right - 275 * k;
-      path(s, 'M' + ARROW.map(([x, y]) => `${x0 + x * k},${cy + y * k}`).join('L') + 'Z', { fill }, li);
+      // the arrow carries on from behind the icon: its shaft starts at the icon's centre, the tip is at the right edge
+      const tip = right, pts = ARROW.map(([x, y]) => [x === 0 ? cx : tip - (275 - x) * k, cy + y * k]);
+      path(s, 'M' + pts.map(p => p.join(',')).join('L') + 'Z', { fill }, li);
     });
   }
 
