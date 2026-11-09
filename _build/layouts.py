@@ -42,7 +42,7 @@ SUBS = {
   "atoms-in-optical-tweezers": "Figure for a quantum computing paper",
   "geology-diagrams": "Maps and figures for a hydrogeology paper",
   "constitutional-ai-training-diagram": "Explainer diagram of an AI training method",
-  "introduction-to-effective-altruism-infographic": "Infographic version of an introductory article",
+  "introduction-to-effective-altruism-infographic": "Turning an article into an infographic",
   "molecular-neuroscience-processes": "Figures for an Alzheimer's research paper",
   "young-and-old-genes": "Illustration of an evolutionary genetics study",
   "noisy-genes": "Illustration of a gene expression study",

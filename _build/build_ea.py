@@ -203,7 +203,8 @@ AI_LEGEND = (_placed("bee", 79, 3244) + _placed("brain", 363.5, 3238)
                '<text x="128" y="3260">Honeybee brain</text><text x="128" y="3277">~ 2012</text>'
                '<text x="355" y="3260" text-anchor="end">Human brain</text><text x="355" y="3277" text-anchor="end">~ 2032</text></g>'
              + '<path d="M99.5,3286V3531H121M386,3292V3353" fill="none" stroke="#0c869b" stroke-width="1.5" stroke-opacity=".7"/>')
-T["ai_m"] = tile([[25, i] for i in range(21, 46) if i not in (24, 35, 36, 37, 38)] + [[25, 24, 2], [25, 24, 3], [25, 24, 4], [25, 24, 6], [25, 24, 7]],
+# phone: without the two horizontal reference lines (22, 23); the legend icons are wired to the dots instead
+T["ai_m"] = tile([[25, i] for i in range(21, 46) if i not in (22, 23, 24, 35, 36, 37, 38)] + [[25, 24, 2], [25, 24, 3], [25, 24, 4], [25, 24, 6], [25, 24, 7]],
                  (55, 3236, 403, 354), "aim", pad=6, cls="tile chart a-chart-m", extra=DOT_SVG + AI_LEGEND, aria_hidden=True)
 T["decision"] = tile([[27, 7], [27, 8], [27, 9], [27, 10]], B["decision"], "decision", pad=6, cls="tile chart",
                      title="An average US politician can influence 10,000 citizens. Timeline from 1920 to 2020 splitting poor decision-making (failure to act against early signs of WWII, widespread use of leaded gasoline, the invasion of Iraq based on faulty intelligence, lack of oversight leading to the financial crisis, slow global response to COVID-19) from good decision-making (Universal Declaration of Human Rights, Montreal Protocol, global vaccination campaigns, Paris Agreement, international efforts to contain monkeypox).")

@@ -96,10 +96,10 @@ def glows_html(slug, n):
     return "\n".join(out)
 
 
-def intro(slug, blocks, extra=""):
+def intro(slug, blocks, extra="", cls="intro-text"):
     chars = len(plain(" ".join(blocks)))
     n = 1 if chars < 1000 else 2
-    return ('    <div class="intro-text">\n' + prose(blocks, extra).replace("\n", "\n  ").replace("    <div", "      <div", 1)
+    return (f'    <div class="{cls}">\n' + prose(blocks, extra).replace("\n", "\n  ").replace("    <div", "      <div", 1)
             + "\n" + glows_html(slug, n).replace("\n", "\n  ").replace("    <div", "      <div", 1) + "\n    </div>")
 
 
@@ -146,7 +146,7 @@ def main_html(sec, sec_title, p, prev, nxt):
         out.append(f'    <div class="masonry" style="--cols:{lay["masonry"]}">\n' + "\n".join(
             "      " + fig(sec, slug, f, alts, k) for k, f in enumerate(rest)) + "\n    </div>")
     if p.get("after"):
-        out.append(prose(p["after"], cls="prose after reveal"))
+        out.append(intro(slug + "/after", p["after"], cls="intro-text after-text"))   # with its own glows, like the intro
     if p.get("videos"):
         out.append('    <div class="videos reveal">' + "".join(
             f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{v}" title="{t}" loading="lazy" '

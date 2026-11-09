@@ -299,6 +299,7 @@ figure.tile .frame::after{display:none}                   /* no dark overlay on 
 .prose h3{font-family:var(--font-body);font-weight:600;font-size:1.05rem;color:var(--navy);margin:1.7em 0 .5em}
 .prose .links{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
 .prose.after{margin-top:90px}
+.intro-text.after-text{margin:90px 0 0}
 .strip{max-width:980px;margin:0 auto;box-shadow:0 10px 40px rgb(7 47 87 / .08)}
 .strip img{display:block;width:100%;height:auto}
 .videos{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1180px;margin:0 auto}

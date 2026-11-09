@@ -105,6 +105,7 @@
       }
       const grp = document.createElementNS(SVGNS, 'g');
       grp.setAttribute('class', 'arw'); grp.style.setProperty('--i', order[k.b]);   // fades in with the box it points to
+      grp.dataset.to = k.b;
       svg.appendChild(grp);
       const p = document.createElementNS(SVGNS, 'path');
       p.setAttribute('d', d);
@@ -116,15 +117,22 @@
       head.setAttribute('fill', 'var(--blue)');
       grp.appendChild(head);
     });
+    lightUp(flow);
+  }
+
+  // an arrow appears once the box it points to has come in (as the page scrolls), a moment after it
+  function lightUp(flow) {
+    flow.querySelectorAll('svg.links .arw:not(.on)').forEach(g => {
+      const to = flow.querySelector(`[data-node="${g.dataset.to}"]`);
+      if (to && to.classList.contains('is-visible')) g.classList.add('on');
+    });
   }
 
   const flows = [...document.querySelectorAll('.flow[data-links]')];
   if (!flows.length) return;
   const all = () => flows.forEach(draw);
-  // arrows start fading in once the flow scrolls into view (same trigger point as the boxes' reveal)
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-on'); io.unobserve(e.target); } }),
-                                      { threshold: 0, rootMargin: '0px 0px -8% 0px' });
-  flows.forEach(f => io.observe(f));
+  const mo = new MutationObserver(ms => ms.forEach(m => { if (m.target.classList.contains('is-visible')) lightUp(m.target.closest('.flow')); }));
+  flows.forEach(f => mo.observe(f, { subtree: true, attributes: true, attributeFilter: ['class'] }));
   const ro = new ResizeObserver(all);
   flows.forEach(f => ro.observe(f));
   if (document.fonts) document.fonts.ready.then(all);

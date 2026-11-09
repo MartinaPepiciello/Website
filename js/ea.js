@@ -4,20 +4,26 @@
      meeting the white line in its header
    - values: each card's line leaves the card and runs on to its icon on the compass
    - take action (as in action.svg): four separate translucent paths start under the woman's feet, each bends off to
-     its own option and ends in an arrow; the option's icon sits on its path, just before the arrow
-   The boxes slide in one by one; each section's lines are drawn once its boxes have settled, then fade in. */
+     its own option and ends behind the option's icon; after the icon, a separate arrow (one shape, so no overlaps)
+   Every line belongs to a box and fades in just after that box slides in. Positions are measured as if the boxes had
+   already arrived (their slide-in offset is taken out), so lines can be drawn at any time. */
 (() => {
   const fig = document.querySelector('figure.ea');
   if (!fig) return;
   const NS = 'http://www.w3.org/2000/svg';
   const TEAL = '#0c869b';
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // vertical slide-in offset currently applied to an element (its own and its ancestors' transforms)
+  const lift = el => { let t = 0; for (let e = el; e && e !== fig; e = e.parentElement) { const m = getComputedStyle(e).transform; if (m && m !== 'none') t += new DOMMatrix(m).f; } return t; };
   const rel = (box, x, y) => { const b = box.getBoundingClientRect(); return [x - b.left, y - b.top]; };
-  // a point in an element's own SVG coordinates -> coordinates inside `box`
-  const at = (el, box, x, y) => { const p = new DOMPoint(x, y).matrixTransform(el.getScreenCTM()); return rel(box, p.x, p.y); };
-  const rect = (el, box) => { const r = el.getBoundingClientRect(), b = box.getBoundingClientRect(); return { l: r.left - b.left, t: r.top - b.top, r: r.right - b.left, b: r.bottom - b.top, w: r.width, h: r.height }; };
+  // a point in an element's own SVG coordinates -> coordinates inside `box`, where the element will rest
+  const at = (el, box, x, y) => { const p = new DOMPoint(x, y).matrixTransform(el.getScreenCTM()); const [a, b] = rel(box, p.x, p.y); return [a, b - lift(el)]; };
+  const rect = (el, box) => {
+    const r = el.getBoundingClientRect(), b = box.getBoundingClientRect(), d = lift(el);
+    return { l: r.left - b.left, t: r.top - b.top - d, r: r.right - b.left, b: r.bottom - b.top - d, w: r.width, h: r.height };
+  };
   const visible = sel => [...fig.querySelectorAll(sel)].find(e => e.getClientRects().length);
+  const owner = el => el.closest('.reveal') || el;
 
   function layer(box, cls) {
     let s = box.querySelector(':scope > svg.ea-wires');
@@ -26,7 +32,15 @@
     s.replaceChildren();
     return s;
   }
-  const path = (s, d, attrs) => { const p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); for (const k in attrs) p.setAttribute(k, attrs[k]); s.appendChild(p); return p; };
+  const wires = [];                                   // [path, the box it belongs to]
+  const path = (s, d, attrs, of) => {
+    const p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', d);
+    for (const k in attrs) p.setAttribute(k, attrs[k]);
+    s.appendChild(p);
+    wires.push([p, owner(of)]);
+    return p;
+  };
   // polyline through points with rounded corners of radius r
   const rounded = (pts, r) => {
     let d = `M${pts[0][0]},${pts[0][1]}`;
@@ -40,7 +54,7 @@
     const e = pts[pts.length - 1];
     return d + `L${e[0]},${e[1]}`;
   };
-  const px = el => el.getScreenCTM().a;                     // px per unit of an SVG
+  const px = el => el.getScreenCTM().a;               // px per unit of an SVG
 
   // rightmost point of the bulb outline at a given height (in the outline's own units)
   function outlineRight(outline, y) {
@@ -65,8 +79,8 @@
     const [rx, ry] = at(outline, box, hr.x, hr.y);
     const [, yl] = at(L, box, 0, 259.7), [, yr] = at(R, box, 0, 362.7);   // the cards' white lines
     const o = { fill: 'none', stroke: TEAL, 'stroke-width': w };
-    path(s, rounded([[lx, ly], [gutL, ly], [gutL, yl], [cl.l + 1, yl]], 10), o);
-    path(s, rounded([[rx, ry], [gutR, ry], [gutR, yr], [cr.r - 1, yr]], 10), o);
+    path(s, rounded([[lx, ly], [gutL, ly], [gutL, yl], [cl.l + 1, yl]], 10), o, L);
+    path(s, rounded([[rx, ry], [gutR, ry], [gutR, yr], [cr.r - 1, yr]], 10), o, R);
   }
 
   function values() {
@@ -83,59 +97,56 @@
       const edge = left ? c.l : c.r, gut = left ? c.l / 2 : (c.r + box.offsetWidth) / 2;
       const [ix, iy, ir] = centre(pick(top, left)), [qx, qy] = at(comp, box, ix, iy);
       const ex = left ? qx - ir * sc : qx + ir * sc;                             // the icon's outer edge
-      path(s, rounded([[edge, y], [gut, y], [gut, qy], [ex, qy]], 10), { fill: 'none', stroke: TEAL, 'stroke-width': d.h });
+      path(s, rounded([[edge, y], [gut, y], [gut, qy], [ex, qy]], 10), { fill: 'none', stroke: TEAL, 'stroke-width': d.h }, card);
     }
   }
+
+  // the arrow from Martina's sketch: shaft and head as one shape, tip at (275, 0), shaft 90 tall, head 210
+  const ARROW = [[0, -45], [140, -45], [85, -105], [170, -105], [275, 0], [170, 105], [85, 105], [140, 45], [0, 45]];
 
   function action() {
     const box = fig.querySelector('.ea-action');
     const s = layer(box, 'ea-wires-action');
     const woman = box.querySelector('.ea-woman'), list = box.querySelector('.a-list');
-    const items = [...list.querySelectorAll('li')];
     const unit = px(woman);                                                         // px per artboard unit (--u)
-    const band = 38 * unit, r = 30 * unit, k = 0.55 * unit;
+    const band = 38 * unit, r = 30 * unit, fill = 'rgb(4 178 190 / .3)';
     const [fx, fy] = at(woman, box, 139.4, 5424);                                   // under her feet
     const right = rect(list, box).r;
-    const fill = 'rgb(4 178 190 / .3)';
-    items.forEach(li => {
-      const t = rect(li, box), cy = t.t + 15 * unit;                                // level with the title's first line
-      path(s, rounded([[fx, fy], [fx, cy], [right - 25 * unit, cy]], r), { fill: 'none', stroke: fill, 'stroke-width': band });
-      // the arrow from action.svg at 0.55 times its size, tip at the right edge
-      const P = [[-83.4, 45.1], [-38.3, 0], [-83.4, -45.1], [-45.1, -45.1], [0, 0], [-45.1, 45.1]];
-      path(s, 'M' + P.map(([x, y]) => `${right + x * k},${cy + y * k}`).join('L') + 'Z', { fill });
+    const k = 62 * unit / 275;                                                      // arrow 62 units long
+    list.querySelectorAll('li').forEach(li => {
+      const ic = rect(li.querySelector('svg'), box), cx = (ic.l + ic.r) / 2, cy = (ic.t + ic.b) / 2;
+      // the path ends at the icon's centre, hidden behind it
+      path(s, rounded([[fx, fy], [fx, cy], [cx, cy]], r), { fill: 'none', stroke: fill, 'stroke-width': band }, li);
+      const x0 = right - 275 * k;
+      path(s, 'M' + ARROW.map(([x, y]) => `${x0 + x * k},${cy + y * k}`).join('L') + 'Z', { fill }, li);
     });
   }
 
   // timeline duration bars: from the item's year to the end of the timeline, fading out (as in the artwork)
   function bars() {
     fig.querySelectorAll('.ea-tl').forEach(ol => {
-      const end = ol.getBoundingClientRect().bottom;
-      ol.querySelectorAll('li.ongoing').forEach(li => li.style.setProperty('--bar', (end - li.getBoundingClientRect().top) + 'px'));
+      const end = ol.getBoundingClientRect().bottom - lift(ol);
+      ol.querySelectorAll('li.ongoing').forEach(li => li.style.setProperty('--bar', (end - li.getBoundingClientRect().top + lift(li)) + 'px'));
     });
   }
 
-  const sections = { '.ea-intro': intro, '.ea-values': values, '.ea-action': action };
-  // a section is ready once every box shown at this width has come in (hidden wide-screen versions don't count)
-  const settled = box => [...box.querySelectorAll('.reveal')].filter(e => e.getClientRects().length).every(e => e.classList.contains('is-visible'));
+  const show = () => wires.forEach(([p, o]) => { if (o.classList.contains('is-visible') && !p.classList.contains('on')) p.classList.add('on'); });
   const narrow = () => getComputedStyle(fig.querySelector('.a-wide')).display === 'none';
 
   function draw() {
     bars();
     const n = narrow();
-    for (const sel in sections) {
-      const box = fig.querySelector(sel);
-      box.querySelectorAll(':scope > svg.ea-wires').forEach(w => { w.style.display = n ? '' : 'none'; });
-      if (!n || !(still || settled(box))) continue;
-      sections[sel]();
-      const w = box.querySelector(':scope > svg.ea-wires');
-      if (!w.classList.contains('on')) w.classList.add('on');
-    }
+    fig.querySelectorAll('svg.ea-wires').forEach(w => { w.style.display = n ? '' : 'none'; });
+    if (!n) return;
+    wires.length = 0;
+    intro(); values(); action();
+    show();
   }
   let raf = 0;
   const later = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(draw); };
-  // once a section's last box has come in (and finished moving), draw its lines
-  const mo = new MutationObserver(ms => { if (ms.some(m => m.target.classList.contains('reveal'))) setTimeout(later, 1300); });
-  for (const sel in sections) mo.observe(fig.querySelector(sel), { subtree: true, attributes: true, attributeFilter: ['class'] });
+  // a box coming in brings its lines with it
+  new MutationObserver(ms => { if (ms.some(m => m.target.classList.contains('reveal'))) show(); })
+    .observe(fig, { subtree: true, attributes: true, attributeFilter: ['class'] });
   new ResizeObserver(later).observe(fig);
   if (document.fonts) document.fonts.ready.then(later);
   addEventListener('load', later);
