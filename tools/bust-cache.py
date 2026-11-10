@@ -1,11 +1,11 @@
-"""Stamp every /css/... and /js/... link in the site's pages with ?v=<short hash of the file>, so browsers fetch a
-stylesheet or script again as soon as it changes (instead of showing a cached copy). Run after editing CSS/JS:
+"""Stamp every /css/..., /js/... and favicon link in the site's pages with ?v=<short hash of the file>, so browsers fetch a
+stylesheet, script or icon again as soon as it changes (instead of showing a cached copy). Run after editing CSS/JS:
     python tools/bust-cache.py
 """
 import hashlib, os, re, sys
 
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REF = re.compile(r'((?:href|src)="/((?:css|js)/[^"?]+))(?:\?v=[0-9a-f]+)?"')
+REF = re.compile(r'((?:href|src)="/((?:css|js)/[^"?]+|images/icons/(?:favicon|apple-touch-icon)[^"?]*))(?:\?v=[0-9a-f]+)?"')
 
 
 def digest(rel, cache={}):

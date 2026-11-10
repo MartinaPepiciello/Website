@@ -33,7 +33,7 @@ Create a Pages project from this folder (or connect a Git repo). **Build command
     diagrams/<project-slug>/       <name>.webp (max 1800px) and <name>-800.webp (thumbnail)
     comics/<project-slug>/
     about/                         propic-round.webp
-    icons/                         nav wordmark (pers-logo-white.webp), favicon.png + apple-touch-icon.png (MP monogram; /favicon.ico too), social icons
+    icons/                         nav wordmark (pers-logo-white.webp), favicon.png + apple-touch-icon.png (MP monogram in a white circle, from src/mp-monogram-circle.png; /favicon.ico too), social icons
     hero/                          page header images (home-, diagrams-, comics-header.webp, 2000px wide)
   content.json                     All text + the image list per project (the reference copy)
   _templates/project.html          Copy this to start a new project page
